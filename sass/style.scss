@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;1,400&display=swap');
+//dm sans pour les onglets de menu
+// @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+//reset css
+*{
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    background-color:var(--thema);
+    width: 5px;
+}
+
+
+
+@import 'header.scss';
+@import 'main.scss';
+@import 'menu.scss';
+@import 'forms.scss';
+@import 'homepage.scss';
+@import 'carousel.scss';
+@import 'headings.scss';
+@import 'frames.scss';
+@import 'footer.scss';
+@import 'responsive.scss';

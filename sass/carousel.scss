@@ -1,0 +1,200 @@
+//desktopcss desktop carousel parcours
+
+#section2{
+    display: flex;
+    flex-direction: column;
+}
+
+.cadreCarousel{
+    margin:auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#carousel0, #carousel1, #carousel2, #carousel3{
+    border-radius: 2px;
+    z-index:150;
+    display: flex;  
+    box-sizing: border-box;
+    width: auto;
+    margin:1.5%;
+    height: 100%;
+    border:1px solid var(--thema-darker);
+}
+
+
+
+#carousel0, #carousel1, #carousel2, #carousel3{
+    .carousel{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .pict{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .logo2, .content{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+            height: 40vh;
+            color:var(--thema-darkest);
+            .paraContent{
+                display: flex;
+                flex-direction: column;
+                font-family: var(--font-normal);
+                
+                .heading3{
+                    border:unset;
+                    padding:0.25rem;
+                    font-style: oblique;
+                    font-family: var(--font-zilla);   
+                }
+                :first-child{
+                    display: flex;
+                    justify-content:center;
+                }
+                p{
+                    margin:2% 2%;
+                    text-align: justify;
+                    text-indent:1rem;
+                    font-size:0.90rem;
+                    i{
+                        justify-content: flex-start!important;
+                    }
+                }
+            }
+        }
+        .content{
+            height: 40vh;
+        }
+    }
+}
+
+
+#carousel1, #carousel2, #carousel3{
+    .pict{
+        .content, .logo2{
+            display: flex;
+            flex-direction: column;
+            height: 24vh;
+            img{
+                width: 25%;
+                display: flex;
+            }
+
+        }
+        .logo2{
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            justify-content: flex-start;
+            .paraContent{
+                p{
+                    text-indent: unset;
+                    &::first-letter{
+                        text-transform: uppercase;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.carousel{
+    position:relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel__container{
+    transition:transform 1s ease;
+    transform:translate3d(0,0,0);
+    display: flex;
+    height:auto;
+}
+
+.carousel__container::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.carousel__item{
+    float: left;
+    overflow:visible;
+    margin:0;
+    .pict img{
+        transition: 0.25s transform ease-in;
+    }
+}
+
+.carousel__next, .carousel__prev{
+    position: absolute;
+    width:24px;
+    height: 48px;
+    background:url('../assets/icons/icon-next.svg') center center no-repeat;
+    top: 50%;
+    margin-top: -20px;
+    right:0px;
+    cursor: pointer;
+    background-size:contain;
+    transition:0.4s;
+    opacity: 0.25;
+    transition-property: opacity,transform;
+}
+
+.carousel__next:hover,.carousel__prev:hover{
+    transform: scale(1.2);
+}
+
+.carousel__prev:hover{
+    transform: scale(-1.2);
+}
+
+.carousel__prev{
+    background:url('../assets/icons/icon-next.svg') center center no-repeat;
+    background-size:100%;
+    transform: scale(-1);
+    right:auto;
+    // left:20px;
+}
+
+.carousel__pagination{
+    display: none;
+    justify-content: center;
+    justify-content: space-evenly;
+    // width: 20vw;
+    margin:auto 40%;
+}
+.carousel__pagination__button{
+    background-color:var(--thema-white);
+    width:12px;
+    height:12px;
+    border-radius:2px;
+    display: flex;
+    margin:0px 4px;
+    transition: transform 0.3s;
+
+    cursor: pointer;
+}
+
+.carousel__pagination__button__active, .carousel__pagination__button:hover{
+    transform:scale(1.4);
+    background-color:var(--thema-white);
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.carousel__pagination{
+    display:flex;
+}

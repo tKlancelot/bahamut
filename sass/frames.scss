@@ -1,0 +1,104 @@
+.frame30, .frame24, .frame24-reverse{
+    border: 0px solid var(--thema-dark-transp);
+    background-color: var(--thema-dark);
+    background-image: url('../assets/textures/green-gobbler.png');
+    background-blend-mode: color-dodge;
+    margin:1.5%;
+    display: flex;
+    flex-direction: column-reverse;
+    .picto{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 36%;  
+    }
+    h4{
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+        font-family: var(--font-zilla);
+        font-size:1.4rem;
+        color:var(--thema-darker);
+        font-style: italic;
+        // opacity: 0.8;
+    }
+}
+
+.frame24, .frame24-reverse{
+    background:unset;
+    background-color:unset;
+    justify-content: space-evenly;
+    border:1px solid var(--thema-darker);
+    font-family: var(--font-normal);
+    h4{ 
+        justify-content: flex-end;
+        padding-right:0.5rem;
+        font-weight: normal;
+        letter-spacing: 0.04rem;
+    }
+    p{
+        margin: 12.5%;
+        text-align: justify;
+        text-indent: 1rem;
+        color: var(--thema-darkest);
+    }
+}
+
+.frame24{
+    // border:4px solid red;
+    background-image: url("../assets/textures/cubes.png");
+    background-color: var(--thema);
+    background-blend-mode: color-dodge;
+    background-size: 20%;
+}
+
+
+.frame50, .frameDl{
+    // border:2px solid blue;
+    box-sizing: border-box;
+    margin: 1.5%;
+    display: flex;
+    flex-wrap: wrap;
+    .contactFrame{
+        display: flex;
+        margin: auto;
+        box-sizing: border-box;
+        width: 49%;
+        height: 49%;
+        border:1px solid var(--thema-dark-transp);
+        .content{
+            width: 100%;
+            height: 100%;
+            .picto{
+                display: flex;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                background-size: 24%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.frameDl .contactFrame{
+    width: 24%;
+    height: 100%;
+    .content{
+        background-image: url("../assets/textures/green-gobbler.png");
+        background-position: center;
+        background-size: auto;
+    }
+    .content .picto{
+        background-size: 64%;
+        opacity: 0.8;
+    }
+}
+
+
+.frame24-reverse{
+    background-color: var(--thema-dark);
+    background-image: url('../assets/textures/green-gobbler.png');
+}

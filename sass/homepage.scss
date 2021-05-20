@@ -1,0 +1,292 @@
+.section{
+    display: flex;
+    // flex-direction: row-reverse;
+    width: 960px;
+    flex-wrap: wrap;
+    .frame-3{
+        // position: absolute;
+        display: flex;
+        width: 960px;
+        // border:2px solid greenyellow;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        margin-top:-7.5%;
+        font-family: var(--font-normal);
+        .under-frame{
+            // background-color:#fffc;
+            box-sizing: border-box;
+            display: flex;
+            width: 64%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            // border:8px solid var(--thema);
+            border:8px solid #fff;
+            #next,#prev{
+                cursor: pointer;
+                background:unset;
+                border:unset;
+                background-image: url('../assets/elements/next-button.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 22px;
+                height: 22px;
+                transition: 0.25s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            #prev{
+                background-image: url('../assets/elements/prev-button.svg');
+            }
+        }
+    }
+}
+.frame-1,.frame-2{
+    width: 480px;
+    height: 480px;
+    border:4px solid var(--thema-dark-transp);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.frame-1{
+    border-right:2px solid var(--thema-dark-transp);
+}
+.frame-2{
+    border-left:2px solid var(--thema-dark-transp);
+    font-family: var(--font-normal);
+    display: flex;
+    .under{
+        // background-image: url('../assets/textures/fabric-dark.png');
+        border:4px solid var(--thema-dark-transp);
+        width: 96%;
+        height:96%;
+        box-sizing: border-box;
+        display: flex;
+        .under-frame{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // border:2px solid red;
+            height: 80%;
+            width: 80%;
+            margin: auto;
+            h4, p{
+                display: flex;
+                width: 92%;
+                color:var(--thema-darkest);
+                margin:2rem;
+            }
+            h4{
+                // font-style: oblique;
+                display: flex;
+                align-items: center;
+                font-family:var(--font-zilla);
+                text-transform: uppercase;
+                font-size:1.4rem;
+                font-style: italic;
+                font-weight: bold;
+                height: 20%;
+                color:var(--thema-darkest);
+                opacity: 0.64;
+                letter-spacing: 0.075rem;
+            }
+            p{
+                // border:2px solid green;
+                padding:0.25rem;
+                text-align: justify;
+                font-style: italic;
+                height: 80%;
+            }
+        }
+    }
+}
+
+
+.picture{
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    width: 96%;
+    height: 96%;
+    border:4px solid var(--thema-dark-transp);
+    .under{
+        display: flex;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+    }
+}
+
+.frame-3{
+    z-index: 50;
+    .under-frame #auto{
+        border:unset;
+        background:unset;
+        width: 26px;
+        height: 26px;
+        background-image:url('../assets/elements/autoplay-button.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+}
+
+.bullet{
+    display: flex;
+    border:3px solid var(--thema-light);
+    // background-color:#fff;
+    border-radius: 4px;
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bullet-active{
+    display: flex;
+    border:3px solid var(--thema-darker);
+    width: 14px;
+    height: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.shadowed{
+    box-shadow: 0px 0px 1px var(--thema-dark) inset,
+    1px 1px 2px var(--thema-dark) inset,
+    -1px -1px 2px var(--thema-dark) inset;
+}
+
+.classy{
+    background-image: url('../assets/textures/light-wool.png');
+    background-color: var(--thema);
+    background-blend-mode: color-dodge;
+    background-size: auto;
+}
+
+.lightest{
+    background-color: var(--thema-lightest);
+}
+
+.white{
+    background-color: #fff;
+}
+
+
+.myBox{
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top:20%;
+    left:20%;
+    z-index: 9999;
+    background-color: #fff;
+    display:flex;
+    animation:scaleXY 0.8s linear forwards;
+    border:3px solid var(--thema-darkest);
+    flex-direction: column;
+    .myBar{
+        display: flex;
+        box-sizing: border-box;
+        background-color: var(--thema-darker);
+        width: 100%;
+        justify-content: space-between;
+        .myH4{
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            padding-bottom: 0.1rem;
+            text-indent: 0.25rem;
+            letter-spacing: 0.06rem;
+            justify-content: center;
+            color:#fff;
+            font-family: var(--font-normal);
+            font-style: italic;
+        }
+        .myCross{
+            height: 24px;
+            width: 24px;
+            border:2px solid var(--thema-darker);
+            background:none;
+            background-image: url('../assets/elements/white-cross.svg');
+            background-position: center;
+            cursor: pointer;
+        }
+    }
+    img{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        height: inherit;
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+//golden css code
+//pour les prochains sites code réutilisable
+//keyword 
+//fadeOut
+//fadeIn 
+
+.fadeIn{
+    transition: 0.05s;
+    animation:fadeIn 1s linear forwards;
+}
+
+.fadeOut{
+    animation:fadeOut 1s linear forwards;
+}
+
+
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+
+    }
+}
+
+@keyframes scaleXY {
+    from{
+        transform: scaleX(0) scaleY(0);
+    }
+    50%{
+        transform: scaleX(1) scaleY(0.01);
+    }
+    to{
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+
+    }
+}
+

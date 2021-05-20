@@ -1,0 +1,69 @@
+.heading1, .heading2,.heading3, .heading4{
+    margin:1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:0.2rem;
+    border:2px solid var(--thema-dark-transp);
+    text-transform: capitalize;
+    font-size:1.2rem;
+    opacity: 0.84;
+    letter-spacing: 0.03rem;    
+    font-family: var(--font-normal);
+    color:var(--thema-darker);
+    font-weight: normal;
+}
+
+.heading2{
+    font-size:1.24rem;
+    color:var(--thema-darkest);
+    justify-content: center;
+    padding-top:0.2rem;
+    text-transform: uppercase;
+    font-family: var(--font-zilla);
+    opacity: 0.38;
+    height: 16vh;
+    font-weight: bolder;
+    // font-style: oblique;
+}
+
+.heading4{
+    font-size:0.78rem;
+    color:var(--thema-darkest);
+    opacity: 0.64;
+}
+
+.heading1{
+    font-size: 1.6rem;
+    background-color:#ECF9FB;
+    background-image: url('../assets/elements/background-heading.svg');
+    // background-image: url('../assets/elements/texture-dark.jpg');
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:var(--thema-darkest);
+    font-family: var(--font-contrail);
+    // justify-content: flex-start;     
+    // text-indent: 0.25rem;
+    height: 48vh;
+    animation:switchBg 6s linear infinite forwards;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+
+@keyframes switchBg {
+    from{
+        background-color: #e2fbff;
+    }
+    25%{
+        background-color: #f1e7fb;
+    }
+    50%{
+        background-color: #f1e7fb;
+    }
+    to{
+        background-color: #e2fbff;
+    }
+}

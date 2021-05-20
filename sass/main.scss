@@ -1,0 +1,52 @@
+main{
+    height:70vh;
+    // border: 2px solid red;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.presentation{
+    #section0{
+        border:3px solid var(--thema-dark-transp);
+        border-radius: 3px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        margin:2.25%;
+    }
+}
+
+
+
+.text-left{
+    text-align: left;
+    justify-content: flex-start!important;
+    text-indent: 0.25rem;
+}
+
+.smaller{
+    font-size: 1rem!important;
+}
+
+.animateBg{
+    animation: animateBg 30s linear forwards infinite;
+}
+
+@keyframes animateBg {
+    from{
+        background-color: initial;
+    }
+    50%{
+        background-color: var(--thema-dark);
+    }
+    to{
+        background-color: initial;
+    }
+}
+
+
+
+.gplay{
+    background-image: url("../assets/textures/gplay.png");
+    background-blend-mode: color-dodge;
+}
