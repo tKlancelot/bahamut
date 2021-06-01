@@ -1,7 +1,6 @@
 const chemin = "./assets/slideshow-intro/";
 
 
-
 class Scene {
     constructor(name,title,para2,source,numero,displayMode) {
         this.name = name;
@@ -14,6 +13,7 @@ class Scene {
     }
     display(cadre)
     {
+
         cadre.style.backgroundImage = 'url('+this.source+')';
         cadre.style.backgroundSize = this.displayMode;
     }
@@ -46,35 +46,34 @@ let currentIndex = 0;
 
 let scene1 = new Scene(
     'portrait',
-    'Hello There !',
-    'Je m\'appelle tarik et je développe votre site vitrine plus vite que mon ombre!'
+    'Salutations',
+    'Je m\'appelle Tarik et le développement web est ma passion'
     +'\n\r',
-    chemin+'portrait.jpg',
+    chemin+'portrait.svg',
     0,
     'cover'
 )
 let scene2 = new Scene(
-    'canape 3d',
-    'création d\'un canapé sur blender, intégration avec three.js',
-    'en suivant un tutoriel sur youtube, j\'ai crée ce petit canapé sur blender.'
-    +'\n\rpuis je l\'ai intégré dans un configurateur 3d réalisé dans le cadre de mon stage',
+    'canapé 3d',
+    'Création d\'un canapé en 3d sur Blender, intégration avec Three.js',
+    'Concevoir un meuble sur Blender 2.90, l\'intégrer dans un projet au format gltf et manipuler les propriétés de cet objet à l\'aide de Three.js',
     chemin+'canape.png',
     0,
     'cover'
 )
 let scene3 = new Scene(
-    'arcomik site',
-    'refonte et intégration du site arcomik.com',
-    'durant ma période de stage, j\'ai participé à la refonte du site arcomik.com qui avait pour but de présenter le festival du même nom ',
+    'site ArcomiK',
+    'Refonte et intégration du site arcomik.com',
+    'Lors de mon stage, j\'ai participé à la refonte du site arcomik.com qui avait pour but de présenter le festival du même nom ',
     chemin+'arcomik-site-3.png',
     1,
     'cover'
 )
 
 let scene4 = new Scene(
-    'scene 4',
-    'intégration de pages pour le site saint-clair.com',
-    'dans le cadre de mon stage, j\'ai intégré des maquettes pour le client saint-clair',
+    'client saint-clair',
+    'Intégration de pages pour le site saint-clair.com',
+    'Dans le cadre de mon stage, j\'ai intégré des maquettes pour le client Saint-Clair, un traiteur parisien.',
     chemin+'saint-clair-1.png',
     2,
     'contain'
@@ -82,8 +81,8 @@ let scene4 = new Scene(
 
 let scene5 = new Scene(
     'maquettage figma',
-    'élaboration de maquettes sur l\'outil figma',
-    'échantillon de la maquette de ce site',
+    'Élaboration de maquettes sur l\'outil Figma',
+    'Un échantillon de la maquette de ce site',
     chemin+'maquettage.png',
     3,
     'contain'
@@ -91,8 +90,8 @@ let scene5 = new Scene(
 
 let scene6 = new Scene(
     'configurateur 3d',
-    'création d\'un configurateur 3d à l\'aide de three.js',
-    'exemple d\'utilisation de la librairie three.js',
+    'Création d\'un configurateur 3d à l\'aide de Three.js',
+    'Exemple d\'utilisation de la librairie Three.js',
     chemin+'configurateur-3d.svg',
     3,
     'contain'
@@ -116,6 +115,7 @@ createBullets();
 let bullets = document.querySelectorAll('.bullet');
 
 function handleAfter(){
+    $(pictureFrame).slideDown(1000);
     sceneArray[currentIndex].display(pictureFrame);
     sceneArray[currentIndex].showTitle(legendFrame);
     sceneArray[currentIndex].showPara(paraFrame);
@@ -124,6 +124,7 @@ function handleAfter(){
 
 function handleBefore(){
     bullets[currentIndex].classList.remove('bullet-active');
+    $(pictureFrame).hide();
 }
 
 // init carousel
@@ -186,12 +187,28 @@ pictureFrame.addEventListener("click",function(){
         myH4.classList.add('myH4');
         myH4.textContent = titre;
 
+        
         // creer un bouton fermer
-
+        
         let myCross = document.createElement('button');
         myCross.classList.add('myCross');
         myBar.append(myH4);
-        myBar.append(myCross);
+        let divOptions = document.createElement('div');
+        divOptions.classList.add('divOptions');
+        myBar.append(divOptions);
+        
+        // bouton zoom in et out
+        let zoomIn = document.createElement('button');
+        zoomIn.classList.add('zoomIn');
+        // zoomIn.textContent = "+";
+        let zoomOut = document.createElement('button');
+        zoomOut.classList.add('zoomOut');
+        // zoomOut.textContent = "-";
+        
+        divOptions.append(zoomIn);
+        divOptions.append(zoomOut);
+        divOptions.append(myCross);
+
 
         // creer l'element image
 
@@ -200,9 +217,43 @@ pictureFrame.addEventListener("click",function(){
         myBox.classList.add('myBox');
         myImage.src = imgUrl.slice(5,-2);
         $("body").append($(myBox));
+
+        let zoomIndex = 0;
+        let zoomArray = [0,1,2,3,4];
+
+        function zoomin() {
+            var currWidth = myImage.clientWidth;
+            var currHeight = myImage.clientHeight;
+            myImage.style.width = (currWidth + 100) + "px";
+            // myImage.style.height = (currHeight + 100) + "px";
+        }
+          
+        function zoomout() {
+            var currWidth = myImage.clientWidth;
+            var currHeight = myImage.clientHeight;
+            myImage.style.width = (currWidth - 100) + "px";
+            // myImage.style.height = (currHeight - 100) + "px";
+        }
+
+
         setTimeout(function(){
             myBox.append(myBar);
             myBox.append(myImage);
+            zoomIn.addEventListener('click',function(){
+                if(zoomIndex < zoomArray.length - 1)
+                {
+                    zoomin();
+                    zoomIndex++;
+                }
+            })
+            zoomOut.addEventListener('click',function(){
+                if(zoomIndex >= -1 )
+                {
+                    zoomout();
+                    zoomIndex--;
+                }
+            })
+
             myCross.addEventListener("click",function(){
             myBox.remove();
             })
@@ -215,18 +266,29 @@ pictureFrame.addEventListener("click",function(){
 })
 
 
+function mouseOverOut(elem,source,source2)
+{
+    elem.addEventListener('mouseover',function(){
+        elem.style.backgroundImage = "url('./assets/elements/"+source2+"')";
+    })
+    elem.addEventListener('mouseout',function(){
+        elem.style.backgroundImage = "url('./assets/elements/"+source+"')";
+    })
+    elem.style.backgroundImage = "url('./assets/elements/"+source+"')";
+}
+
 autoplayButton.addEventListener("click",function(){
     if(autoplaying == true)
     {
-        this.style.backgroundImage = "url('./assets/elements/autoplay-button.svg')";
+        mouseOverOut(this,"autoplay-button.svg","autoplay-button.svg")
         clearInterval(myInt);
         handleAfter();
         autoplaying = false;
     }
     else
     {
+        mouseOverOut(this,"stop-button.svg","stop-button-hover.svg")
         autoplaying = true;
-        this.style.backgroundImage = "url('./assets/elements/stop-button.svg')";
         myInt = setInterval(function(){
             if(currentIndex < sceneArray.length-1){
                 handleBefore();
@@ -238,7 +300,7 @@ autoplayButton.addEventListener("click",function(){
                 currentIndex = 0;
                 handleAfter();
             }
-        },3000)
+        },5000)
     }
 })
 
@@ -247,20 +309,21 @@ autoplayButton.addEventListener("click",function(){
 function autoplay()
 {
     autoplaying = true;
-    autoplayButton.style.backgroundImage = "url('./assets/elements/stop-button.svg')";
+
     myInt = setInterval(function(){
         if(currentIndex < sceneArray.length-1)
         {
             handleBefore();
             currentIndex++;
             handleAfter();
+            // $(pictureFrame).fadeOut("slow");
         }
         else{
             handleBefore();
             currentIndex = 0;
             handleAfter();
         }
-    },2400)
+    },5000)
 }
 
 autoplay();
@@ -268,24 +331,26 @@ autoplay();
 
 // formulaire action
 
-let input = document.forms.robby.test;
-let submit = document.forms.robby[1];
+// let input = document.forms.robby.test;
+// let submit = document.forms.robby[1];
 
-submit.addEventListener('click',function(){
-    let inputVal = input.value;
-    if(inputVal == 1)
-    {
-        for(let i  = 0; i < bullets.length;i++)
-        {
-            bullets[i].classList.remove('bullet')
-            bullets[i].textContent = i+1;
-        }
-    }
-    else{
-        for(let i  = 0; i < bullets.length;i++)
-        {
-            bullets[i].classList.add('bullet')
-            bullets[i].textContent = "";
-        }
-    }   
-})
+// submit.addEventListener('click',function(){
+//     let inputVal = input.value;
+//     if(inputVal == 1)
+//     {
+//         for(let i  = 0; i < bullets.length;i++)
+//         {
+//             bullets[i].classList.remove('bullet')
+//             bullets[i].textContent = i+1;
+//         }
+//     }
+//     else{
+//         for(let i  = 0; i < bullets.length;i++)
+//         {
+//             bullets[i].classList.add('bullet')
+//             bullets[i].textContent = "";
+//         }
+//     }   
+// })
+
+

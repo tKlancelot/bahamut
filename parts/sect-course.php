@@ -4,19 +4,20 @@ require('object-list.php');
 
 define("CHEMIN","./assets/carousel/");
 
-$section1 = new Section();
-$section1->startSection('sect','section2','data-spy');
-$titreSection = $section1->createTitle('#parcours','heading2');
+$section2 = new Section();
+$section2->startSection('sect reveal','section2','data-spy');
+$titreSection = $section2->createTitle('#parcours','heading2 reveal-2');
 
-$section1->startDiv('cadreCarousel');
-    $section1->startDiv('','carousel0');
+
+$section2->startDiv('cadreCarousel');
+    $section2->startDiv('','carousel0');
     for ($i = 0;$i < count($carouselItems);$i++):
-        $section1->createCourseCarousel($carouselItems,$i);
+        $section2->createCourseCarousel($carouselItems,$i,true,false);
     endfor;
-    $section1->endSectionFrame();
-$section1->endSectionFrame();
+    $section2->endDiv();
+$section2->endDiv();
 
-$section1->endSection();
+$section2->endSection();
 
 ?>
 

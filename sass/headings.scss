@@ -5,7 +5,8 @@
     justify-content: center;
     padding-top:0.2rem;
     border:2px solid var(--thema-dark-transp);
-    text-transform: capitalize;
+    // text-transform: capitalize;
+    // background-color: var(--thema-dark-transp);
     font-size:1.2rem;
     opacity: 0.84;
     letter-spacing: 0.03rem;    
@@ -14,42 +15,89 @@
     font-weight: normal;
 }
 
+.paraContent .heading3{
+    text-transform: uppercase;
+}
+
+.heading1{
+    border:unset;
+    margin: initial;
+}
+
 .heading2{
     font-size:1.24rem;
     color:var(--thema-darkest);
     justify-content: center;
-    padding-top:0.2rem;
+    padding-top:0.16rem;
     text-transform: uppercase;
-    font-family: var(--font-zilla);
-    opacity: 0.38;
-    height: 16vh;
-    font-weight: bolder;
-    // font-style: oblique;
+    font-family: var(--font-normal);
+    opacity: 0.64;
+    height: 12vh;
+    border: 1px solid var(--thema-darkest);
+    border-left: none;
+    border-right: none;
 }
 
 .heading4{
     font-size:0.78rem;
     color:var(--thema-darkest);
+    border:unset;
     opacity: 0.64;
+}
+
+.heading3{
+    border:1px solid var(--thema-dark-transp);
+    padding:unset;
+    text-transform: uppercase;
+    font-size: 0.92rem;
+    height: 8vh;
+    letter-spacing: 0.064rem;
+}
+#carousel4 .pict .classy .heading3,
+#carousel5 .pict .classy .heading3,
+#carousel6 .pict .classy .heading3,
+.contacts .heading3
+{
+    height: initial;
+    font-size: initial;
+    text-transform: initial;
 }
 
 .heading1{
     font-size: 1.6rem;
-    background-color:#ECF9FB;
+    background-color:var(--thema-lightest);
     background-image: url('../assets/elements/background-heading.svg');
     // background-image: url('../assets/elements/texture-dark.jpg');
     background-blend-mode: overlay;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 90%;
     color:var(--thema-darkest);
     font-family: var(--font-contrail);
     // justify-content: flex-start;     
     // text-indent: 0.25rem;
-    height: 48vh;
-    animation:switchBg 6s linear infinite forwards;
+    height: 11.25vh;
     text-transform: uppercase;
     opacity: 1;
+}
+
+.divHeading{
+    display: flex;
+    border:1px solid var(--thema-darker);
+    border-radius: 2px;
+    height: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    h4{
+        width: 100%;
+        display: flex;
+        margin: auto;
+        font-size: 1.04rem;
+        border:unset;
+        height: 96%;   
+    }
 }
 
 

@@ -7,12 +7,12 @@ $thumbnails = [
             "source" => "image-1.svg"
         ],
         [
-            "title" => "logo",
-            "source" => "image-3.svg"
+            "title" => "développeur web junior",
+            "source" => "image-2.svg"
         ],
         [
-            "title" => "dev web junior",
-            "source" => "image-2.svg"
+            "title" => "3d friendly",
+            "source" => "image-9.svg"
         ]
     ],
     [
@@ -25,22 +25,22 @@ $thumbnails = [
             "source" => "image-5.svg"
         ],
         [
-            "title" => "tablet & smartphones",
+            "title" => "tablet & smartphone",
             "source" => "image-6.svg"
         ]
     ],
     [
         [
-            "title" => "des idées toute l'année",
+            "title" => "idées novatrices",
             "source" => "image-7.svg"
         ],
         [
-            "title" => "créatif",
+            "title" => "esprit créatif",
             "source" => "image-8.svg"
         ],
         [
-            "title" => "3d friendly",
-            "source" => "image-9.svg"
+            "title" => "implication",
+            "source" => "image-21.svg"
         ]
     ],
     [
@@ -49,7 +49,7 @@ $thumbnails = [
             "source" => "image-10.svg"
         ],
         [
-            "title" => "mon logotype",
+            "title" => "un logotype",
             "source" => "image-11.svg"
         ],
         [
@@ -87,7 +87,7 @@ $thumbnails = [
     ],
     [
         [
-            "title" => "rigueur",
+            "title" => "rigoureux",
             "source" => "image-19.svg"
         ],
         [
@@ -95,8 +95,8 @@ $thumbnails = [
             "source" => "image-20.svg"
         ],
         [
-            "title" => "impliqué",
-            "source" => "image-21.svg"
+            "title" => "organisé",
+            "source" => "image-3.svg"
         ]
     ]
 ];
@@ -112,7 +112,7 @@ $headings = [
     ],
     [
         "class" => "heading3",
-        "title" => "gestion de projet"
+        "title" => "mindset"
     ],
     [
         "class" => "heading3",
@@ -137,42 +137,42 @@ $carouselItems = [
         'title' => 'introduction',
         'source' => 'picture-test.svg',
         'content' => 'Hello, Je m\'appelle Tarik et je suis développeur web junior',
-        'content2' => 'Arrivé au terme de ma reconversion professionnelle et fraîchement diplômé, je suis de plus en plus passionné par mon nouveau métier'
+        'content2' => 'Concevoir des maquettes, créer des graphismes, réfléchir à des algorithmes performants, apprendre de nouvelles technologies sont autant d\'activités qui m\'animent !'
     ],
     [
         'title' => 'parcours linguistique',
         'source' => 'picture-2.svg',
         'content' => 'Après un bac littéraire, j\'ai fait des études d\'espagnol et d\'anglais à l\'université Stendhal à Grenoble',
-        'content2' => 'Je suis bilingue, j\'ai récemment passé le TOEIC avec brio'
+        'content2' => 'Je suis bilingue, j\'ai récemment passé le TOEIC avec succès'
     ],
-    [
-        'title' => 'mécanicien couturier',
-        'source' => 'picture-3.svg',
-        'content' => 'Il y a 10 ans, je me passionnais pour la mode, la couture et le dessin de figurine. Pendant 2 ans, j\'ai appris à exécuter une gamme de montage, diverses techniques de couture à plat, faire du moulage et dessiner des figurines de mode',
-        'content2' => 'J\'ai fait mes études au Lycée Octave Feuillet à Paris et j\'ai obtenu le titre professionnel de métier de la mode vêtement flou'
-    ],
-    [
-        'title' => 'grande distribution',
-        'source' => 'picture-4.svg',
-        'content' => 'J\'ai ensuite travaillé pendant 8 ans dans le commerce de grande distribution. J\'ai notamment tenu le rôle de chargé de service pour la majeure partie de ma carrière. Dès lors, j\'avais pour missions principales de gérer une ligne de caisse, réaliser les tâches administratives et comptables du magasin.',
-        'content2' => 'J\'ai développé un sens commercial et des qualités non-negligeables. Par ailleurs , j\'ai fait une formation pour ce poste à Vaires-Sur-Marne'
-    ],
+    // [
+    //     'title' => 'mécanicien couturier',
+    //     'source' => 'picture-3.svg',
+    //     'content' => 'Il y a 10 ans, je me passionnais pour la mode, la couture et le dessin de figurine. Pendant 2 ans, j\'ai appris à exécuter une gamme de montage, diverses techniques de couture à plat, faire du moulage et dessiner des figurines de mode',
+    //     'content2' => 'J\'ai fait mes études au Lycée Octave Feuillet à Paris et j\'ai obtenu le titre professionnel de métier de la mode vêtement flou'
+    // ],
+    // [
+    //     'title' => 'grande distribution',
+    //     'source' => 'picture-4.svg',
+    //     'content' => 'J\'ai ensuite travaillé pendant 8 ans dans le commerce de grande distribution. J\'ai notamment tenu le rôle de chargé de service pour la majeure partie de ma carrière. Dès lors, j\'avais pour missions principales de gérer une ligne de caisse, réaliser les tâches administratives et comptables du magasin.',
+    //     'content2' => 'J\'ai développé un sens commercial et des qualités non-negligeables. Par ailleurs , j\'ai fait une formation pour ce poste à Vaires-Sur-Marne'
+    // ],
     [
         'title' => 'human booster',
         'source' => 'picture-6.svg',
-        'content' => 'Après 1 an de formation au sein de l\'organisme human booster, me voilà fièrement diplômé au titre de développeur web et web mobile',
+        'content' => 'Après 1 an de formation au sein de l\'organisme human booster, me voilà diplômé au titre de développeur web et web mobile',
         'content2' => 'À cet égard, je remercie HUMAN BOOSTER pour leur implication, leur sérieux et les efforts qu\'ils ont déployé pour maintenir et poursuivre la formation en dépit du contexte sanitaire'
     ],
     [
         'title' => 'get bold design',
         'source' => 'picture-7.svg',
-        'content' => 'J\'ai réalisé mon stage de fin de parcours chez le webdesigner <span>Gaël Barnabé</span> qui dirige sa propre entreprise Get Bold Design',
+        'content' => 'J\'ai réalisé mon stage de fin de parcours chez le webdesigner Gaël Barnabé qui dirige sa propre entreprise Get Bold Design',
         'content2' => 'J\'ai eu la chance d\'apprendre de nombreuses techniques de création graphique et d\'intégration web, c\'est à cette occasion que j\'ai découvert l\'outil Figma, et les librairies p5.js et three.js. J\'ai beaucoup apprécié ce stage. Cela a renforcé ma volonté de devenir un développeur aguéri.'
     ],
     [
         'title' => 'vers de nouveaux défis',
         'source' => 'picture-5.svg',
-        'content' => 'Je me sens pleinement serein pour la suite du programme et prêt à relever des défis',
+        'content' => 'Je me sens pleinement serein pour la suite de l\'aventure et prêt à relever de nouveaux défis',
         'content2' => 'J\'ai hâte d\'intégrer une équipe, commencer à mettre en pratique les techniques acquises et en apprendre de nouvelles!'
     ],
 ];
@@ -182,66 +182,66 @@ $skillsItems = [
         [
             "title" => "html5",
             "source" => "logo-html.svg",
-            "content" => "structurer des documents avec html5"
+            "content" => "structurer des documents avec html5."
         ],
         [
             "title" => "css3",
             "source" => "logo-css.svg",
-            "content" => "styliser les pages web avec le cascading stylesheet",
+            "content" => "styliser les pages web avec le cascading stylesheet.",
         ],
         [
             "title" => "javaScript",
             "source" => "logo-js.svg",
-            "content" => "créer des pages web dynamiques et intéractives avec le langage de programmation javaScript"
+            "content" => "créer des pages web dynamiques et intéractives avec le langage de programmation javaScript."
         ],
         [
             "title" => "sass",
             "source" => "logo-sass.svg",
-            "content" => "rendre le code css plus performant avec le préprocesseur sass"
+            "content" => "rendre le code css plus performant avec le préprocesseur Sass."
         ]
     ],
     [
         [
             "title" => "php",
             "source" => "logo-php.svg",
-            "content" => "manipuler un langage de script côté serveur"
+            "content" => "utiliser un langage de script côté serveur."
         ],
         [
             "title" => "mysql",
             "source" => "logo-mysql.svg",
-            "content" => "communiquer avec une base de données via un langage de requête",
+            "content" => "communiquer avec une base de données via un langage de requête.",
         ]
     ],
     [
         [
             "title" => "bootstrap",
             "source" => "logo-bootstrap.svg",
-            "content" => "créer des styles rapidement avec la librairie bootstrap"
+            "content" => "créer des styles rapidement avec la librairie Bootstrap."
         ],
         [
             "title" => "jQuery",
             "source" => "logo-jQuery.svg",
-            "content" => "faciliter l'écriture du code javaScript",
+            "content" => "librairie javaScript facilitant l'écriture des scripts côté client, le parcours et la manipulation du DOM, la création d'animation et d'évènements.",
         ],
         [
             "title" => "wordpress",
             "source" => "logo-wordpress.svg",
-            "content" => "créer un site web avec le très populaire système de gestion de contenu wordpress",
+            "content" => "créer un site web avec le très populaire système de gestion de contenu Wordpress.",
         ],
         [
             "title" => "symfony5",
             "source" => "logo-symfony.svg",
-            "content" => "créer facilement la partie back-end d'un site ou d'une application avec le framework MVC symfony",
+            "content" => "créer facilement la partie back-end d'un site ou d'une application avec le framework MVC Symfony.",
         ],
         [
             "title" => "angular",
             "source" => "logo-angular.svg",
-            "content" => "créer facilement un site ou une application front-end avec le framework Angular",
+            "content" => "créer facilement un site ou une application front-end avec le framework Angular.",
         ],
         [
             "title" => "reactjs",
             "source" => "logo-react.svg",
-            "content" => "créer facilement des applications onepage avec le système de composants et d'états du framework react",
+            "content" => "créer facilement des applications onepage avec le système de composants et d'états du framework React.",
             "currently-learning" => true
         ],
     ],
@@ -301,33 +301,198 @@ $contacts = [
     ],
 ];
 
+$partners = [
+    [
+        "source" => '',
+        "href" => 'http://quentin-chevalier-42.fr/home',
+        "content" => 'quentin chevalier/elecreep',
+    ],
+    [
+        "source" => '',
+        "href" => "http://laurie-villeneuve.com",
+        "content" => 'laurie villeneuve'
+    ],
+    [
+        "source" => '',
+        "href" => "https://jonathanlopez.wingrog.fr/",
+        "content" => 'johnatan lopez'
+    ],
+    [
+        "source" => '',
+        "href" => "http://www.laurent-curat.net/",
+        "content" => 'laurent curat'
+    ],
+    [
+        "source" => '',
+        "href" => "https://grafikart.fr/tutoriels",
+        "content" => 'tutoriels grafikart'
+    ],
+    [
+        "source" => '',
+        "href" => "https://agence-upgrade.fr/",
+        "content" => 'nicolas meunier / agence upgrade'
+    ]
+];
+
+
 $downloads = [
     [
         "source" => 'icon-dl-cv.svg',
         "href" => './downloads/cv-20-mai.pdf',
         "download" => 'cv-20-mai.pdf',
-        "content" => 'donwload cv',
+        "content" => 'cv moderne',
     ],
     [
-        "source" => 'icon-dl-pr.svg',
+        "source" => 'icon-dl-cv.svg',
         "href" => './downloads/printable-resume.pdf',
         "download" => 'printable-resume.pdf',
-        "content" => 'donwload printable cv',
+        "content" => 'cv basique',
     ],
     [
-        "source" => 'icon-dl-rs.svg',
+        "source" => 'icon-dl-cv.svg',
         "href" => './downloads/rs-tarik-louatah.pdf',
         "download" => 'rs-tarik-louatah.pdf',
-        "content" => 'donwload rapport stage',
+        "content" => 'rapport de stage',
     ],
     [
-        "source" => 'icon-dl-dp.svg',        
+        "source" => 'icon-dl-cv.svg',      
         "href" => './downloads/dp-tarik-louatah.pdf',
         "download" => 'dp-tarik-louatah.pdf',
-        "content" => 'donwload dossier professionnel',
+        "content" => 'dossier professionnel',
     ],
 ];
 
 
 
+$skillsItems2 = [
+        [
+            "title" => "html5",
+            "source" => "logo-html.svg",
+            "content" => "structurer des documents avec html5",
+            "categ" => "front-end"
+        ],
+        [
+            "title" => "css3",
+            "source" => "logo-css.svg",
+            "content" => "styliser les pages web avec le cascading stylesheet",
+            "categ" => "front-end"
+        ],
+        [
+            "title" => "javaScript",
+            "source" => "logo-js.svg",
+            "content" => "créer des pages web dynamiques et intéractives avec le langage de programmation javaScript",
+            "categ" => "front-end"
+        ],
+        [
+            "title" => "sass",
+            "source" => "logo-sass.svg",
+            "content" => "rendre le code css plus performant avec le préprocesseur sass",
+            "categ" => "front-end"
+        ],
+        [
+            "title" => "php",
+            "source" => "logo-php.svg",
+            "content" => "manipuler un langage de script côté serveur",
+            "categ" => "back-end"
+        ],
+        [
+            "title" => "mysql",
+            "source" => "logo-mysql.svg",
+            "content" => "communiquer avec une base de données via un langage de requête",
+            "categ" => "back-end"
+        ],
+        [
+            "title" => "bootstrap",
+            "source" => "logo-bootstrap.svg",
+            "content" => "créer des styles rapidement avec la librairie bootstrap",
+            "categ" => "framework front"
+        ],
+        [
+            "title" => "jQuery",
+            "source" => "logo-jQuery.svg",
+            "content" => "librairie javaScript facilitant l'écriture des scripts côté client, le parcours et la manipulation du DOM, la création d'animation et d'évènements",
+            "categ" => "library"
+        ],
+        [
+            "title" => "wordpress",
+            "source" => "logo-wordpress.svg",
+            "content" => "créer un site web avec le très populaire système de gestion de contenu wordpress",
+            "categ" => "cms"
+        ],
+        [
+            "title" => "symfony5",
+            "source" => "logo-symfony.svg",
+            "content" => "créer facilement la partie back-end d'un site ou d'une application avec le framework MVC symfony",
+            "categ" => "framework back"
+        ],
+        [
+            "title" => "angular",
+            "source" => "logo-angular.svg",
+            "content" => "créer facilement un site ou une application front-end avec le framework Angular",
+            "categ" => "framework front"
+        ],
+        [
+            "title" => "reactjs",
+            "source" => "logo-react.svg",
+            "content" => "créer facilement des applications onepage avec le système de composants et d'états du framework react",
+            "currently-learning" => true,
+            "categ" => "framework front"
+        ],
+];
+
+$informations = [
+    [
+        [
+            "heading" => "projet"
+        ],
+        [
+            "nom du projet" => "<i>bahamut</i>"
+        ],
+        [
+            "date de début" => "01/05/2021"
+        ]
+    ],
+    [
+        [
+            "heading" => "matériel"
+        ],
+        [
+            "os" => "linux - ubuntu 20.04"
+        ],
+        [
+            "ide" => "vscode"
+        ],
+        [
+            "maquettage" => "figma"
+        ],
+        [
+            "gestion projet" => "trello"
+        ]
+    ],
+    [
+        [
+            "heading" => "objectifs développeur"
+        ],
+        [
+            "obj" => "programmer en php orienté objet dans une architecture mvc"
+        ],
+        [
+            "obj" => "définir des règles pour le responsive dans un script séparé"
+        ],
+        [
+            "obj" => "créer une navspy en mode téléphone"
+        ],
+        [
+            "obj" => "créer en javaScript une classe de carousel réutilisable"
+        ],
+        [
+            "obj" => "donner la possibilité à l'utilisateur de changer de thème"
+        ]
+    ]
+];
+
+
+
 ?>
+
+<!--  -->

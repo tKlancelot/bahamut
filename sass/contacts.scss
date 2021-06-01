@@ -1,0 +1,105 @@
+.contact{
+    width: 72%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    hr{
+        height: 80%;
+        margin:auto;
+        border:1px solid var(--thema-dark-transp);
+        border-left: unset;
+    }
+    .contacts,.section-left,.section-right{
+        height: 80%;
+        margin: auto 1rem;
+        border:1px solid var(--thema-dark-transp);
+        .heading3{
+            border-left: unset;
+            border-right: unset;
+            border-color:var(--thema-dark-transp);
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+    }
+    .contacts{
+        width: 100%;
+        margin: auto 1rem;
+        .submit{
+            transition: 0.5s;
+            &:hover{
+                background-color: var(--thema-dark);
+            }
+
+        }
+        .frame50{
+            border-color:var(--thema-dark-transp);
+            .contactFrame{
+                width:25%;
+                height:100%;
+                .content{
+                    width: 100%;
+                    height: 100%;
+                    .picto{
+                        opacity: 0.6;
+                        transition: 0.5s;
+                        background-size: 20%;
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-left{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        width: 33%;
+        .heading3{
+            height: initial;
+            margin: 1rem;
+        }
+        .frameDl{
+
+            .contactFrame{
+                width: 100%;
+                height: initial;
+                .content{
+                    background-image: initial!important;
+                    .picto{
+                        font-size: 0.92rem;
+                        height: 4vh;
+                        display: flex;
+                        align-items: center;
+                        margin:auto 1.5%;
+                        justify-content: start;
+                        background-image: initial!important;
+                        font-family: var(--font-normal);
+                        &::before
+                        {
+                            content:" 📚";
+                            position: relative;
+                            padding-right:1rem;
+                        }
+                        &:hover{
+                            background-color:var(--thema-dark-transp);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-right{
+        margin:auto;
+    }
+}
+
+
+.partner .contactFrame .content .picto{
+    text-transform: capitalize;
+    &::before{
+        content:'🌏 '!important;
+    }
+}

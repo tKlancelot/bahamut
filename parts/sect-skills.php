@@ -5,8 +5,8 @@ require('object-list.php');
 define("CHEMIN2","./assets/skills/");
 
 $section = new Section();
-$section->startSection('sect','section3','data-spy');
-$titreSection = $section->createTitle('#compétences','heading2');
+$section->startSection('sect reveal','section3','data-spy');
+$titreSection = $section->createTitle('#compétences','heading2 reveal-2');
 
 // boucle dans une boucle pour créer plusieurs carousel
 
@@ -17,8 +17,8 @@ for($j = 0 ; $j < count($skillsItems);$j++):
         for ($i = 0;$i < count($skillsItems[$j]);$i++):
             $section->createCarousel($j,$i,$skillsItems);
         endfor;
-        $section->endSectionFrame();
-    $section->endSectionFrame();
+        $section->endDiv();
+    $section->endDiv();
 endfor;
 
 $section->endSection();

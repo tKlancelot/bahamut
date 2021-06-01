@@ -18,7 +18,7 @@
     display: flex;  
     box-sizing: border-box;
     width: auto;
-    margin:1.5%;
+    margin: 0% 1.5%;
     height: 100%;
     border:1px solid var(--thema-darker);
 }
@@ -76,7 +76,7 @@
 }
 
 
-#carousel1, #carousel2, #carousel3{
+#carousel1, #carousel2, #carousel3, #carousel6{
     .pict{
         .content, .logo2{
             display: flex;
@@ -151,18 +151,34 @@
     transition-property: opacity,transform;
 }
 
+
+.carousel__next, .carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--thema-white);
+    top: 50%;
+    margin-top: -20px;
+    right: 0px;
+    cursor: pointer;
+    background-size: 80%;
+    transition: 0.4s;
+    transform: scale(0.8);
+    transition-property: opacity,transform;
+}
+
 .carousel__next:hover,.carousel__prev:hover{
-    transform: scale(1.2);
+    transform: scale(1);
 }
 
 .carousel__prev:hover{
-    transform: scale(-1.2);
+    transform: scale(-1);
 }
 
 .carousel__prev{
     background:url('../assets/icons/icon-next.svg') center center no-repeat;
     background-size:100%;
-    transform: scale(-1);
+    transform: scale(-0.8);
     right:auto;
     // left:20px;
 }
@@ -171,11 +187,10 @@
     display: none;
     justify-content: center;
     justify-content: space-evenly;
-    // width: 20vw;
     margin:auto 40%;
 }
 .carousel__pagination__button{
-    background-color:var(--thema-white);
+    background-color:var(--thema);
     width:12px;
     height:12px;
     border-radius:2px;
@@ -188,7 +203,7 @@
 
 .carousel__pagination__button__active, .carousel__pagination__button:hover{
     transform:scale(1.4);
-    background-color:var(--thema-white);
+    background-color:var(--thema);
 }
 
 .hidden{
@@ -198,3 +213,155 @@
 .carousel__pagination{
     display:flex;
 }
+
+
+#carousel4, #carousel5, #carousel6{
+    margin: auto;
+    display: flex;
+    box-sizing: border-box;
+    max-width: 92vw;
+    .carousel__container{
+        width: auto;
+        .carousel__item{
+            // border:1px solid red;
+            display: flex;
+            height: 50vh;
+            justify-content: center;
+            align-items: center;
+            margin:auto 0.5rem;
+            .pict{
+                display:flex;
+                width: 100%;
+                margin:auto;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+                border:1px solid var(--thema-dark-transp);
+                border-radius: 2px;
+                box-sizing: border-box;
+                padding:0.25rem;
+                .classy{
+                    background-image: url("../assets/textures/diagonal-striped-brick.png");
+                }
+                .logo2 .frame30{
+                    // border:2px solid blue;
+                    width: 100%;
+                    .picto{
+                        background-size: 44%;
+                    }
+                }
+                .logo2, .content{
+                    display: flex;
+                    width: 100%;
+
+                    font-family: var(--font-normal);
+                    .paraContent{
+                        display: flex;
+                        flex-direction: column;
+                        max-height: 100%;
+                        .heading3{
+                            border:1px solid var(--thema-dark-transp);
+                            margin:2% 5% auto;
+                            background-color: var(--thema-white);
+                            letter-spacing: 0.05rem;
+                        }
+                    }
+                    img, p{
+                        display: flex;
+                        margin: auto;
+                    }
+                    p{
+                        text-indent: 1rem;
+                        margin:auto 5%;
+                        text-align: justify;
+                        font-size: 0.8rem;
+                        color:var(--thema-darkest);
+
+                    }
+                }
+                .content{
+                    box-sizing: border-box;
+                    height: 100%;
+                    justify-content: start;
+                }
+            }
+        }
+    }
+}
+
+#carousel4 .carousel .carousel__container .carousel__item .pict{
+    background-color:var(--thema-transp);
+    background-image: url('../assets/textures/triangles.png');
+    background-blend-mode: color-burn;
+    background-size: auto;
+}
+
+#carousel5{
+    .carousel__container{
+        .carousel__item{
+            height: 32vh;
+            // border:2px solid red;
+            .pict .classy{
+                background:unset;
+            }
+            .logo2, .content{
+                .legend{
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    .heading3{
+                        width: 100%;
+                        font-size:1.1rem;
+                    }
+                }
+            }
+            .logo2 .frame30{
+                background-color: var(--thema);
+                background-image: url('../assets/textures/hexellence.png');
+                background-blend-mode: color-dodge;
+            }
+        }
+    }
+}
+
+
+#carousel6 .carousel .carousel__container{   
+    .carousel__item{
+        height: 42vh;
+        .pict .content{
+            height: 50%;
+            display: flex;
+            background-image: url('../assets/textures/green-gobbler.png');
+            background-blend-mode:color-dodge;
+            background-color: var(--thema-lightest);
+            background-blend-mode: darken;
+            .paraContent {
+                height: 100%;
+                .heading3{
+                    margin: 0.5rem auto auto;
+                    width: 92%;
+                }
+                p{
+                    width: 92%;
+                    margin: 1rem auto auto;
+                    text-indent: unset;
+                    text-align: justify;
+                    font-size: 0.88rem;
+                    &:nth-child(3){
+                        color:var(--thema-darkest);
+                        // font-family: var(--font-zilla);
+                        font-weight: normal;
+                        font-style: italic;
+                        letter-spacing: 0.06rem;
+                        text-transform: uppercase;
+                        margin:auto auto 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+

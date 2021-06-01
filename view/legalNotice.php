@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$document = "#legal notice";
-$title = "#legal notice";
-$sub = "portfolio - tarik louatah";
+$document = "#mentions légales";
+$title = "tarik";
+$sub = "louatah";
 
 require ('parts/header.php');
 

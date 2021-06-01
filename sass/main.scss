@@ -1,13 +1,13 @@
 main{
     height:70vh;
-    // border: 2px solid red;
+    background-color: var(--thema-white);
     box-sizing: border-box;
     display: flex;
 }
 
 .presentation{
-    #section0{
-        border:3px solid var(--thema-dark-transp);
+    #Pres{
+        // border:3px solid var(--thema-dark-transp);
         border-radius: 3px;
         box-sizing: border-box;
         width: 100%;
@@ -15,8 +15,6 @@ main{
         margin:2.25%;
     }
 }
-
-
 
 .text-left{
     text-align: left;
@@ -44,9 +42,19 @@ main{
     }
 }
 
-
-
 .gplay{
     background-image: url("../assets/textures/gplay.png");
     background-blend-mode: color-dodge;
+}
+
+.diapo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heading2{
+        height: auto;
+        margin: auto auto 0;
+        display: flex;
+        width: 25%;
+    }
 }

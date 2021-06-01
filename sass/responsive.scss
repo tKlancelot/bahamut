@@ -17,7 +17,7 @@
         box-shadow: initial;
     }
     
-    .header .zoneTitle{
+    .responsiveB .header .zoneTitle{
         font-size: 1.2rem;
         display: flex;
         // border:2px solid blue;
@@ -28,6 +28,15 @@
         text-align: center;
         margin-block-end: 0;
         margin-block-start: 0;
+        background-image:url('../assets/elements/logo-title-resp.svg')!important;
+        background-position: center;
+        background-repeat: no-repeat;
+        span:nth-child(1)::after
+        {
+            content:unset;
+            display: none;
+
+        }
         span{
             display: contents;
         }
@@ -53,10 +62,13 @@
         left:0;
         width: auto;
         height: auto;
-        background-color: var(--thema);
+        background-color: var(--thema-lightest);
         box-sizing: border-box;
         display: flex;
-        margin:1.5%;
+        margin:initial;
+        border:1px solid var(--thema-dark-transp);
+        // flex-direction: initial;
+        opacity: 0.64;
         .logoFrame{
             display: flex;
             justify-content: center;
@@ -78,6 +90,7 @@
             width: 100%;
             .headingMenu{
                 width: auto;
+                margin: initial;
             }
             .form{
                 overflow-y: auto;
@@ -86,6 +99,15 @@
         }
     }
 
+    .header .zoneTitle{
+        -webkit-text-fill-color: var(--thema-darkest);
+        opacity: 0.68;
+        -webkit-text-stroke-width: initial;
+        font-weight: bolder;
+        span:nth-child(2)::after{
+            display: none;  
+        } 
+    }
 
     // main
 
@@ -115,14 +137,15 @@
                     width: 100vw;
                     max-width: 100vw;
                     height: 100%;
+                    padding:1.5%;
                     #next,#prev{
                         position: absolute;
                         z-index: 50;
-                        top:116%;
-                        right:2%;
+                        top:68%;
+                        right:1.5%;
                         cursor: pointer;
                         background:unset;
-                        background-color:#fff;
+                        background-color:var(--thema-white);
                         border:unset;
                         background-image: url('../assets/icons/icon-next.svg');
                         background-position-x: center;
@@ -139,7 +162,7 @@
                     }
                     #prev{
                         background-image: url('../assets/icons/icon-next.svg');
-                        left:2%;
+                        left:1.5%;
                         border-left: 0px;
                         transform: scale(-1);
                     }
@@ -151,6 +174,7 @@
                     }
                     .frame-1{
                         height: 64%;
+                        padding:initial;
                         .picture{
                             height: 98%;
                             border:2px solid var(--thema-dark-transp);
@@ -170,7 +194,7 @@
                             h4, p{
                                 margin: initial;
                                 height: auto;
-                                font-size: 0.78rem;
+                                font-size: 0.84rem;
                             }
                             h4{
                                 font-size: 0.92rem;
@@ -186,25 +210,14 @@
                         position: relative;
                         left: 0%;
                         bottom: 0%;
-                        margin-top: unset;
+                        // margin-top: unset;
                             .under-frame{
                             width: 100%;
-                            border:6px solid #fff;
+                            // border:6px solid #fff;
+                            padding:unset;
                             #auto,#prev,#next{
                                 width: 16px;
                                 height: 16px;
-                            }
-                            .bullet{
-                                border:1px solid var(--thema-darker);
-                                background-color:var(--thema-darkest);
-                                width: 9px;
-                                height: 9px;
-                            }
-                            .bullet-active{
-                            border:2px solid var(--thema-darkest);
-                            background-color:unset;
-                            width: 12px;
-                            height: 12px;
                             }
                         }
                     }
@@ -213,7 +226,13 @@
         }
     }
 
-
+    .responsiveB .frame30 h4,
+    .responsiveB .frame24 p,
+    .responsiveB .frame24 h4,
+    .responsiveB .frame24-reverse h4,
+    .responsiveB .frame24-reverse p{
+        color:#18475Ac8;
+    }
 
     // footer
 
@@ -239,6 +258,7 @@
             }
         } 
     }
+
 
 
 }

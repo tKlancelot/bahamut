@@ -2,8 +2,8 @@
 session_start();
 
 $document = "#pedagogy";
-$title = "#pedagogy";
-$sub = "portfolio - tarik louatah";
+$title = "tarik";
+$sub = "louatah";
 
 require ('parts/header.php');
 

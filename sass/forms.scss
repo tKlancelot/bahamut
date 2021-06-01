@@ -14,6 +14,62 @@
     }
 }
 
+//formulaire de contact en mode responsive
+.form-tarik{
+  // border:2px solid var(--thema);
+  font-family: var(--font-normal);
+  margin:1.5%;
+  padding:1%;
+  .section-label{
+    color:var(--thema-darker);
+    letter-spacing: 0.04rem;
+    background-color: initial;
+  }
+  .section-input{
+    margin: auto;
+    border:1px solid var(--thema-darker);
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    textarea, input{
+      border:1px solid var(--thema-dark-transp);
+      background-color: var(--thema-lightest);
+      color:var(--thema-darkest);
+    }
+    input, textarea{
+      width: 100%;
+      margin:0.25rem;
+      &::placeholder{
+        color:var(--thema-darker);
+        font-family: var(--font-normal);
+        font-style: italic;
+        opacity: 0.64;
+      }
+    }
+    .submit{
+      width: 16%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border:1px solid var(--thema-dark-transp);
+      background-color: var(--thema-transp);
+      border-radius: 0;
+    }
+  }
+}
+
+.form form select{
+  font-size: 0.8rem;
+  color:var(--thema-darkest);
+}
+
+#erreur.heading4{
+  color:red;
+  font-weight: bolder;
+  text-transform: initial;
+}
+
 .section-input, .section-label{
     padding:0.25rem;
     margin:0.2rem 0;
@@ -23,7 +79,7 @@
 }
 
 .section-input{
-    border:1px solid var(--thema-darkest);
+    border:1px solid var(--thema-dark-transp);
     border-radius: 2px;
 }
 
@@ -38,12 +94,18 @@
 }
 
 .submit{
-    // border:1px solid var(--thema-darkest);
     background:initial;
+    border:1px solid var(--thema-dark-transp);
     border-radius: 2px;
-    background-color:var(--thema-dark);
+    background-color: var(--thema-transp);
     color:var(--thema-darkest);
     padding:0.25rem;
+    font-size: 0.78rem;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover{
+      background-color: var(--thema);
+    }
 }
 
 
@@ -71,10 +133,10 @@
     bottom: 0;
     margin:auto;
     display: flex;
-    background-color:var(--thema);   
+    border:1px solid var(--thema-dark-transp);
+    background-color:var(--thema-lightest);   
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius:6px;
   }
   
   .slider:before {
@@ -86,16 +148,14 @@
     background-color: #fff;
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius:4px;
+    // border-radius:4px;
   }
   
   input:checked + .slider {
-    background-color: #AEB0F5;
+    background-color: var(--thema);
   }
   
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--thema-darkest);
-  }
+
   
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);

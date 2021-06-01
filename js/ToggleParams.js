@@ -1,7 +1,6 @@
 export function ToggleParams()
 {
     let divForm = document.querySelector('#params');
-    let myForm = document.querySelectorAll('#params .form form')[1];
     let boutonParam = document.querySelector('.logoFrame');
     let cross = document.querySelector('.cross');
 
@@ -19,17 +18,14 @@ export function ToggleParams()
         if(!toggled)
         {
             let theParent = this.parentNode;
-            divForm.style.display = "flex";
-            divForm.classList.add('shadowed');
-            this.style.display = "none";
+            $(this).fadeOut('fast');
+            $(divForm).fadeIn(600);
+            $('.divParam').css('border','1px solid var(--thema-dark-transp)');
             if (!window.matchMedia("(min-width: 600px)").matches) 
             {
-                // theParent.style.width = "100%";
-                // divForm.style.height = "100vh";
                 divForm.style.width = "-webkit-fill-available";
                 $("#navSpy").hide();  
                 $(toggleMenuButton).hide();  
-                myForm.style.display = "none";
             } 
             toggled = true;
         }
@@ -39,13 +35,15 @@ export function ToggleParams()
         if(toggled)
         {
             let theParent = this.parentNode.parentNode.parentNode;
-            divForm.style.display = "none";
-            boutonParam.style.display = "flex";
+            $('.divParam').css('border','initial');
+            $(divForm).hide('fast');
+            setTimeout(function(){$(boutonParam).fadeIn(100)},400);
             if (!window.matchMedia("(min-width: 600px)").matches) 
             {
                 theParent.style.width = "initial";
                 $("#navSpy").show();
                 $(toggleMenuButton).show();  
+                initMenuStatus();
             } 
             toggled = false;
         }
@@ -54,19 +52,61 @@ export function ToggleParams()
 
     // fleche de toggle
 
+    // par defaut menu non deplié
+
+    function initMenuStatus()
+    {
+        $("#navSpy").slideUp();
+        $("#toggleMenu").css('transform','rotate(180deg)');
+        toggleMenu = 1;
+    }
+
+    initMenuStatus();
+
     $("#toggleMenu").click(function(){
         if(toggleMenu == 0)
         {
             // alert('hey');
-            $("#navSpy").slideUp();
+            $("#navSpy").toggle('slow');
+            $('.divParam').css('height','auto');
+            $('.divParam').css('opacity','0.64');
             $(this).css('transform','rotate(180deg)');
             toggleMenu = 1;
         }
         else
         {
-            $("#navSpy").slideDown();
+            $("#navSpy").fadeIn();
+            $('.divParam').css('height','100%');
+            $('.divParam').css('opacity','1');
             $(this).css('transform','initial');
             toggleMenu = 0;
         }
     })
+
+
+    // gestion du bouton d'info
+    // let panneau = document.querySelector('.panneauInfo');
+    // let boutonInfo = document.querySelector('#informations');
+    // let cross2 = document.querySelector('.panneau-head .cross2');
+    // let togglePanneau = 0;
+
+    // $(panneau).hide();
+    // boutonInfo.addEventListener("click",function(){
+    //     if(togglePanneau == 0)
+    //     {
+    //         $(".divParam").hide();
+    //         $(panneau).show(500);
+    //         togglePanneau = 1;
+    //     }
+    // })
+    // cross2.addEventListener('click',function()
+    // {
+    //     if(togglePanneau == 1)
+    //     {
+    //         $(panneau).hide(500);
+    //         $(".divParam").show(500);
+    //         togglePanneau = 0;
+    //     }
+    // })
+
 }

@@ -3,11 +3,13 @@
 //dm sans pour les onglets de menu
 // @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap');
 
 //reset css
 *{
     margin:0;
     scroll-behavior: smooth;
+    cursor: url("../assets/elements/cursor-bahamut.cur")32 32, auto;
 }
 
 ::-webkit-scrollbar{
@@ -15,15 +17,49 @@
     width: 5px;
 }
 
+::selection{
+    background-color:var(--thema);
+}
 
+body{
+    background-color:var(--thema-white);
+    // cursor: url('../assets/elements/cursor-leviathan.cur'), auto;
+}
 
 @import 'header.scss';
 @import 'main.scss';
+@import 'contacts.scss';
 @import 'menu.scss';
 @import 'forms.scss';
 @import 'homepage.scss';
 @import 'carousel.scss';
+@import 'carte-visite.scss';
 @import 'headings.scss';
 @import 'frames.scss';
 @import 'footer.scss';
 @import 'responsive.scss';
+
+
+.reveal [class*="reveal-"]{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.reveal-visible [class*="reveal-"]{
+    opacity: 0.64;
+    transition:2s ease;
+    transform: translateY(0px);
+}
+.reveal-visible .reveal-2{
+    transition-delay: 0.25s;
+}
+.reveal-visible .reveal-3{
+    transition-delay: 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal [class*="reveal-"]{
+        opacity: 0.64;
+        transform: translateY(0px);
+    }
+}
