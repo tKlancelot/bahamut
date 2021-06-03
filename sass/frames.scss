@@ -148,8 +148,15 @@
     text-decoration: unset;
     color:var(--thema-darkest);
     text-align: center;
-    font-family: var(--font-contrail);
+    font-family: var(--font-normal);
+    text-transform: initial;
+    letter-spacing: -0.02rem;
+    opacity: 1;
     &::before{
         content:"📚 ";
     }
+}
+
+.contact .section-left .frameDl .contactFrame .content .picto{
+    opacity: 0.88;
 }

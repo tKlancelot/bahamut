@@ -1,20 +1,17 @@
 <?php
-
 session_start();
-// session_destroy();   
-
 
 $document = "#portfolio";
-$title = "tarik";
-$sub = "louatah";
-
+$title = REGULAR_TITLE;
+$sub = "";
 
 require ('parts/header.php');
+
+require ('./parts/custom-form.php');
 
 // n'apparait qu'en mode telephone
 
 $section0 = new Section();
-// $section0->startSection('sect reveal','section0',null);
 echo "<section id='section0' class='sect reveal' data-spy>";
 $section0->createTitle('web&nbsp;<span>developer</span>','heading1 test');
 $section0->createTitle('#presentation','heading2 reveal-2');
@@ -23,23 +20,16 @@ $section0->endSection();
 
 $main = new Main();
 
-
-
 echo '<main class="presentation">';
-// $main->startFrame('presentation');
-
 
 // apparait en mode telephone et desktop
 
 $main->startDiv('section-main','Pres');
 
-require('./parts/custom-form.php');
-
-
-
 // contenu
 
 ?>
+
     <div class="section">
         <div class="frame-1">
             <div class="picture">
@@ -55,7 +45,7 @@ require('./parts/custom-form.php');
             </div>
         </div>
         <div class="frame-3">
-            <div class='under-frame <?=$_SESSION['class-panel'] ?? "classy"?>'>
+            <div class='under-frame classy'>
                 <button id="auto"></button>
                 <button id="prev"></button>
                 <button id="next"></button>
@@ -94,6 +84,19 @@ import { Config } from "./js/Config.js";
 Activate(0,'.menu ul li a');
 ToggleParams();
 Config();
+$(".logoFrame").css('border','2px solid transparent');
+$(".logoFrame").attr('title','cliquez pour changer le thème');
+
+$( function() {
+    // $( ".logoFrame" ).draggable();
+    $('.logoFrame').mouseover(function(){
+        $(this).css('border','2px solid var(--thema-darkest)');
+    })
+    $('.logoFrame').mouseleave(function(){
+        $(this).css('border','2px solid transparent');
+    })
+});
+
 
 var app = document.querySelector('.heading1.test');
 
@@ -101,21 +104,19 @@ var typewriter = new Typewriter(app, {
     loop: true
 });
 
-typewriter.typeString('web developer')
+typewriter.typeString('Web Developer')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('ready to work !')
+    .typeString('Ready to Work !')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('let\'s get coding !')
+    .typeString('Let\'s Get Programming !')
     .pauseFor(1500)
     .start();
-
 
 </script>
 
 <script src="./js/homePage.js">
-
 
 </script>
 

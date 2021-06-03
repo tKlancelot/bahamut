@@ -2,8 +2,8 @@
 session_start();
 
 $document = "#planete-3d";
-$title = "tarik";
-$sub = "louatah";
+$title = REGULAR_TITLE;
+$sub = "";
 
 require ('parts/header.php');
 

@@ -1,7 +1,9 @@
 .contact{
-    width: 72%;
+    width: 100%;
     display: flex;
     margin: auto;
+    padding-left:10%;
+    padding-right:10%;
     justify-content: center;
     hr{
         height: 80%;
@@ -19,11 +21,13 @@
             border-color:var(--thema-dark-transp);
             text-align: center;
             text-transform: uppercase;
-            font-weight: normal;
+            // font-weight: bolder;
+            font-size: 1.16rem!important;
+            font-family: var(--font-contrail);
         }
     }
     .contacts{
-        width: 100%;
+        width: 80%;
         margin: auto 1rem;
         .submit{
             transition: 0.5s;
@@ -61,6 +65,11 @@
             height: initial;
             margin: 1rem;
         }
+        .partner{
+            overflow-y: scroll;
+            width: auto;
+            overflow-x: hidden;
+        }
         .frameDl{
 
             .contactFrame{
@@ -89,6 +98,7 @@
                     }
                 }
             }
+
         }
     }
     .section-right{

@@ -2,8 +2,8 @@
 session_start();
 
 $document = "#parcours";
-$title = "tarik";
-$sub = "louatah";
+$title = REGULAR_TITLE;
+$sub = "";
 
 require ('parts/header.php');
 

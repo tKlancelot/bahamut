@@ -35,6 +35,17 @@ class Scene {
     }
 }
 
+
+// creons un loader
+let thisBody = document.querySelector('body');
+console.log(thisBody);
+$(thisBody).hide();
+window.onload = loadPage;
+
+function loadPage(){
+    $(thisBody).fadeIn(1800);
+}
+
 let pictureFrame = document.querySelector('.picture .under');
 let legendFrame = document.querySelector('.frame-2 .under .under-frame h4');
 let paraFrame = document.querySelector('.frame-2 .under .under-frame p');
@@ -49,12 +60,12 @@ let scene1 = new Scene(
     'Salutations',
     'Je m\'appelle Tarik et le développement web est ma passion'
     +'\n\r',
-    chemin+'portrait.svg',
+    chemin+'portrait.jpg',
     0,
     'cover'
 )
 let scene2 = new Scene(
-    'canapé 3d',
+    'canapé 3d au format gltf',
     'Création d\'un canapé en 3d sur Blender, intégration avec Three.js',
     'Concevoir un meuble sur Blender 2.90, l\'intégrer dans un projet au format gltf et manipuler les propriétés de cet objet à l\'aide de Three.js',
     chemin+'canape.png',
@@ -97,7 +108,16 @@ let scene6 = new Scene(
     'contain'
 )
 
-let sceneArray = [scene1,scene2,scene3,scene4,scene5,scene6];
+let scene7 = new Scene(
+    'sculptris face',
+    'Visage modélisé avec Sculptris',
+    'Travailler un visage en 3d avec le freeware sculptris',
+    chemin+'sculptris-face.png',
+    3,
+    'contain'
+)
+
+let sceneArray = [scene1,scene2,scene3,scene4,scene5,scene6,scene7];
 
 function createBullets()
 {
@@ -300,7 +320,7 @@ autoplayButton.addEventListener("click",function(){
                 currentIndex = 0;
                 handleAfter();
             }
-        },5000)
+        },6400)
     }
 })
 
@@ -323,7 +343,7 @@ function autoplay()
             currentIndex = 0;
             handleAfter();
         }
-    },5000)
+    },6400)
 }
 
 autoplay();

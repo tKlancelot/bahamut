@@ -29,7 +29,7 @@ class Header
         if($menu):
         $menu = new Menu();
         $menu->startMenu('menu');
-        $menuItems = ['intro','vignettes','parcours','skills','projets'];
+        $menuItems = ['intro','vignettes','parcours','skills','projets','contact'];
         for ($i = 0; $i < count($menuItems); $i++):
         $menu->createLinkInLi($menuItems[$i]);
         endfor;

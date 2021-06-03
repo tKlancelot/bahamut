@@ -67,6 +67,10 @@ switch($_GET)
         $controller = new ProjectController();
         $controller->carteVisite();
         break;   
+    case $_GET['controller'] == "projets" && $_GET['action'] == "couch3d":
+        $controller = new ProjectController();
+        $controller->couch3d();
+        break;   
 }
 
 

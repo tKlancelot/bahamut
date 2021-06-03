@@ -2,8 +2,8 @@
 session_start();
 
 $document = "#thumbnails";
-$title = "tarik";
-$sub = "louatah";
+$title = REGULAR_TITLE;
+$sub = "";
 
 
 

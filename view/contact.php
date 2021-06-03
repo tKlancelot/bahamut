@@ -3,8 +3,8 @@ session_start();
 
 
 $document = "#contact";
-$title = "tarik";
-$sub = "louatah";
+$title = REGULAR_TITLE;
+$sub = "";
 
 require ('parts/header.php');
 
@@ -24,7 +24,7 @@ $sectionLeft->startSectionFrame('frameDl','auto','','','');
 
 for ($i = 0; $i < count($downloads); $i++):
     $sectionLeft->startDiv('contactFrame');
-    $sectionLeft->startDiv('content');
+    $sectionLeft->startDiv('content reveal');
     $sectionLeft->createImageLink(CHEMIN3.$downloads[$i]['source'],$downloads[$i]['href'],'picto',$downloads[$i]['content'],$downloads[$i]['download']);
     $sectionLeft->endDiv();
     $sectionLeft->endDiv();
@@ -112,6 +112,17 @@ $('.form-tarik .section-input input').css('padding','0.25rem');
 $('.form-tarik .section-input textarea').css('padding','0.25rem');
 
 
+// $('.section-left').css('display','none');
+// $('.contacts').css('display','none');
+$('.contact hr').css('display','none');
+
+window.onload = function(){
+    setTimeout(function(){
+        // $('.section-left').slideDown(100);
+        $('.contact hr').slideDown(2500);
+        // $('.contacts').slideDown(100);
+    },500)
+}
 
 
 

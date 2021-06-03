@@ -17,6 +17,14 @@ export function ToggleParams()
     boutonParam.addEventListener('click',function(){
         if(!toggled)
         {
+            if(toggleMenu == 0)
+            {
+                $("#navSpy").toggle('slow');
+                $('.divParam').css('height','auto');
+                $('.divParam').css('opacity','0.64');
+                $("#toggleMenu").css('transform','rotate(180deg)');
+                toggleMenu = 1;
+            }
             let theParent = this.parentNode;
             $(this).fadeOut('fast');
             $(divForm).fadeIn(600);
@@ -76,8 +84,9 @@ export function ToggleParams()
         else
         {
             $("#navSpy").fadeIn();
-            $('.divParam').css('height','100%');
+            $('.divParam').css('height','100vh');
             $('.divParam').css('opacity','1');
+            $('#navSpy').css('justify-content','center');
             $(this).css('transform','initial');
             toggleMenu = 0;
         }

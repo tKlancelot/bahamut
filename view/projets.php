@@ -2,26 +2,24 @@
 session_start();
 
 $document = "#projets";
-$title = "tarik";
-$sub = "louatah";
+$title = REGULAR_TITLE;
+$sub = "";
 
 require ('parts/header.php');
+require ('object-list.php');
 
 $main = new Main();
 $main->startFrame('projet');
 ?>
 
 <div class="projet-list">
+    <?php for($i = 0; $i < count($projects);$i++): ?>
     <div class="projet-content">
-        <a href="index.php?controller=projets&&action=planete3d">go to project</a>
-        <p><i>objectif</i> : système solaire des langages de développement réalisé avec la librairie Three.js</p>
-        <span>planète 3d</span>
+        <a href="<?= $projects[$i]['link']?>">go to project</a>
+        <p><i>ojectif : </i><?= $projects[$i]['goal']?></p>
+        <span><?=$projects[$i]['span']?></span>
     </div>
-    <div class="projet-content">
-        <a href="index.php?controller=projets&&action=carteVisite">go to project</a>
-        <p><i>objectif</i> : exploiter l'api drag and drop de javascript afin de créer des programmes pédagogiques</p>
-        <span>drag&drop</span>
-    </div>
+    <?php endfor; ?>
 </div>
 
 <?php

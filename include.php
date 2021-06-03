@@ -2,6 +2,7 @@
 
 require ('vendor/autoload.php');
 require ('functions.php');
+require ('const.php');
 require ('controller/DefaultController.php');
 require ('controller/ProjectController.php');
 require ('model/Header.php');

@@ -13,22 +13,28 @@
 }
 
 ::-webkit-scrollbar{
-    background-color:var(--thema);
-    width: 5px;
+    background-color:var(--thema-dark-transp);
+    width: 10px;
+    border:2px solid var(--thema-white);
 }
 
 ::selection{
-    background-color:var(--thema);
+    background-color:#71b8d4;
 }
 
 body{
     background-color:var(--thema-white);
+    max-width: 100vw!important;
+    max-height: 100vh!important;
+    box-sizing: border-box;
     // cursor: url('../assets/elements/cursor-leviathan.cur'), auto;
 }
 
 @import 'header.scss';
 @import 'main.scss';
 @import 'contacts.scss';
+@import 'mentions.scss';
+@import 'couch3d.scss';
 @import 'menu.scss';
 @import 'forms.scss';
 @import 'homepage.scss';

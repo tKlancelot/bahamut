@@ -9,22 +9,26 @@
   cursor: url("../assets/elements/cursor-bahamut.cur") 32 32, auto; }
 
 ::-webkit-scrollbar {
-  background-color: var(--thema);
-  width: 5px; }
+  background-color: var(--thema-dark-transp);
+  width: 10px;
+  border: 2px solid var(--thema-white); }
 
 ::selection {
-  background-color: var(--thema); }
+  background-color: #71b8d4; }
 
 body {
-  background-color: var(--thema-white); }
+  background-color: var(--thema-white);
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  box-sizing: border-box; }
 
 .header {
   height: 15vh;
   box-sizing: border-box;
   display: flex;
   background-color: var(--thema-lightest);
-  background-image: url("../assets/textures/classy-fabric.png");
-  background-blend-mode: color-burn;
+  background-image: url("../assets/textures/cubes.png");
+  background-blend-mode: darken;
   opacity: 0.86; }
   .header .logo, .header .zoneTitle {
     height: 100%;
@@ -42,7 +46,7 @@ body {
       border: 8px solid var(--thema-white);
       box-sizing: border-box; }
   .header .zoneTitle {
-    width: 50%;
+    width: 40%;
     font-size: 2.4rem;
     font-family: var(--font-spectral);
     font-weight: normal;
@@ -51,31 +55,23 @@ body {
     letter-spacing: -0.06rem;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 0.084rem;
-    pointer-events: none;
+    pointer-events: visibleStroke;
     opacity: 0.84;
     background-image: url("../assets/elements/logo-title.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center; }
-    .header .zoneTitle span {
-      color: var(--thema-darkest); }
-      .header .zoneTitle span::first-letter {
-        font-size: 4.6rem;
-        -webkit-text-stroke-width: initial !important;
-        -webkit-text-fill-color: var(--thema-darkest); }
-      .header .zoneTitle span:nth-child(1)::after {
-        content: 'développeur web';
-        font-size: 1.24rem;
-        position: absolute;
-        top: 5.6rem;
-        margin-left: 2.4rem;
-        color: var(--thema-darkest);
-        font-weight: bolder;
-        letter-spacing: 0.025rem;
-        -webkit-text-fill-color: initial;
-        -webkit-text-stroke-width: initial; }
-      .header .zoneTitle span:nth-child(3)::first-letter {
-        font-size: 4rem !important; }
+    background-position: center;
+    text-align: center;
+    color: var(--thema-darkest);
+    transition-property: all;
+    transition-duration: 1s; }
+    .header .zoneTitle:hover {
+      -webkit-text-fill-color: var(--thema-transp);
+      letter-spacing: 0.064rem;
+      -webkit-text-stroke-color: var(--thema-darker); }
+    .header .zoneTitle:hover ::after {
+      color: #951cdb !important;
+      transform: translate(50px); }
   .header .menu {
     width: 50%;
     display: flex; }
@@ -113,6 +109,21 @@ body {
             background-color: var(--thema-white);
             border-left: 10px solid var(--thema-white);
             border-right: 10px solid var(--thema-white); }
+
+.header .zoneTitle > span:nth-child(1)::first-letter {
+  font-size: 5rem !important; }
+.header .zoneTitle > span:nth-child(1)::after {
+  content: 'développeur web';
+  font-size: 1.24rem;
+  position: absolute;
+  top: 5.6rem;
+  margin-left: -9%;
+  color: var(--thema-darkest);
+  font-weight: bolder;
+  letter-spacing: 0.025rem;
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke-width: initial;
+  transition: 1.6s; }
 
 .normal-header {
   background-color: var(--thema-dark); }
@@ -176,9 +187,11 @@ main {
     width: 25%; }
 
 .contact {
-  width: 72%;
+  width: 100%;
   display: flex;
   margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
   justify-content: center; }
   .contact hr {
     height: 80%;
@@ -195,9 +208,10 @@ main {
       border-color: var(--thema-dark-transp);
       text-align: center;
       text-transform: uppercase;
-      font-weight: normal; }
+      font-size: 1.16rem !important;
+      font-family: var(--font-contrail); }
   .contact .contacts {
-    width: 100%;
+    width: 80%;
     margin: auto 1rem; }
     .contact .contacts .submit {
       transition: 0.5s; }
@@ -225,6 +239,10 @@ main {
     .contact .section-left .heading3 {
       height: initial;
       margin: 1rem; }
+    .contact .section-left .partner {
+      overflow-y: scroll;
+      width: auto;
+      overflow-x: hidden; }
     .contact .section-left .frameDl .contactFrame {
       width: 100%;
       height: initial; }
@@ -253,7 +271,89 @@ main {
   .partner .contactFrame .content .picto::before {
     content: "🌏 " !important; }
 
-.section-main .divParam {
+.frame-mention {
+  border: 2px solid var(--thema-dark-transp);
+  width: 50vw;
+  margin: 2.5% auto;
+  display: flex;
+  flex-direction: column; }
+  .frame-mention .barreTitre .heading2 {
+    height: auto;
+    font-size: 1rem; }
+  .frame-mention .content {
+    margin: 1.5%;
+    border: 1px solid var(--thema-dark-transp);
+    flex-basis: 80%;
+    overflow-y: scroll;
+    font-family: var(--font-normal); }
+    .frame-mention .content .para, .frame-mention .content .heading5 {
+      color: var(--thema-darkest);
+      margin: auto 1.5%;
+      text-align: justify; }
+    .frame-mention .content .heading5 {
+      letter-spacing: 0.04rem;
+      font-size: 1rem;
+      height: 4vh;
+      display: flex;
+      align-items: center;
+      opacity: 0.76;
+      margin: 1.5%;
+      border-top: 1px solid var(--thema-dark-transp);
+      border-bottom: 1px solid var(--thema-dark-transp); }
+    .frame-mention .content hr {
+      margin: 1.5%;
+      border-color: var(--thema-dark-transp);
+      border-top: none; }
+  .frame-mention .panneau {
+    margin: 1.5%;
+    border-top: 4px solid var(--thema-dark-transp);
+    border-bottom: 4px solid var(--thema-dark-transp);
+    height: 4vh;
+    display: flex; }
+    .frame-mention .panneau .link {
+      font-family: var(--font-normal);
+      color: var(--thema-darker);
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-decoration: none;
+      justify-content: space-evenly;
+      transition: 0.5s; }
+      .frame-mention .panneau .link:hover {
+        background-color: var(--thema-dark-transp); }
+    .frame-mention .panneau .active {
+      color: var(--thema-white) !important;
+      background-color: var(--thema-darkest); }
+
+.config3d {
+  display: flex;
+  flex-direction: column; }
+  .config3d .heading2 {
+    height: auto;
+    margin: 0.5rem auto 0;
+    width: 47%;
+    font-size: 1.12rem; }
+  .config3d .bottomPanel {
+    margin: auto;
+    border: 2px solid blue;
+    width: 47%;
+    display: flex;
+    justify-content: center;
+    height: 4vh; }
+    .config3d .bottomPanel button {
+      margin: auto;
+      width: 100px; }
+  .config3d .cadre3d {
+    display: flex;
+    margin: auto;
+    border: 1px solid var(--thema-darkest); }
+    .config3d .cadre3d canvas {
+      background-image: url("../assets/3d/background-blur.jpg");
+      background-position: center;
+      background-size: cover;
+      margin: 0.25rem; }
+
+.divParam, .responsiveB .divParam {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -265,14 +365,13 @@ main {
   z-index: 999;
   width: 10%;
   box-sizing: border-box; }
-  .section-main .divParam .logoFrame {
+  .divParam .logoFrame, .responsiveB .divParam .logoFrame {
     display: flex;
-    border: 6px solid #fff;
     height: 52px;
     width: 52px;
-    cursor: pointer;
-    background-color: var(--thema-lightest); }
-    .section-main .divParam .logoFrame .logoParam {
+    background-color: var(--thema-lightest);
+    transition: 0.5s; }
+    .divParam .logoFrame .logoParam, .responsiveB .divParam .logoFrame .logoParam {
       display: flex;
       margin: auto;
       height: 32px;
@@ -280,7 +379,7 @@ main {
       background-image: url("../assets/elements/logo-param.svg");
       background-position: center;
       background-size: contain; }
-  .section-main .divParam #params {
+  .divParam #params, .responsiveB .divParam #params {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
@@ -288,7 +387,7 @@ main {
     justify-content: space-between;
     max-height: 60vh;
     width: 100%; }
-    .section-main .divParam #params .form, .section-main .divParam #params .headingMenu {
+    .divParam #params .form, .divParam #params .headingMenu, .responsiveB .divParam #params .form, .responsiveB .divParam #params .headingMenu {
       background-color: var(--thema-white);
       height: auto;
       display: flex;
@@ -296,7 +395,7 @@ main {
       box-sizing: border-box;
       align-items: center;
       margin: 0.5rem; }
-      .section-main .divParam #params .form h5, .section-main .divParam #params .headingMenu h5 {
+      .divParam #params .form h5, .divParam #params .headingMenu h5, .responsiveB .divParam #params .form h5, .responsiveB .divParam #params .headingMenu h5 {
         width: 100%;
         height: 100%;
         display: flex;
@@ -305,7 +404,7 @@ main {
         text-transform: uppercase;
         margin-block-end: 0;
         margin-block-start: 0; }
-        .section-main .divParam #params .form h5 a, .section-main .divParam #params .headingMenu h5 a {
+        .divParam #params .form h5 a, .divParam #params .headingMenu h5 a, .responsiveB .divParam #params .form h5 a, .responsiveB .divParam #params .headingMenu h5 a {
           font-family: var(--font-contrail);
           color: var(--thema-darkest);
           text-decoration: unset;
@@ -318,18 +417,18 @@ main {
           align-items: center;
           width: 100%;
           transition: 0.5s; }
-          .section-main .divParam #params .form h5 a:hover, .section-main .divParam #params .headingMenu h5 a:hover {
+          .divParam #params .form h5 a:hover, .divParam #params .headingMenu h5 a:hover, .responsiveB .divParam #params .form h5 a:hover, .responsiveB .divParam #params .headingMenu h5 a:hover {
             background-color: var(--thema-darker);
             color: var(--thema-white); }
-    .section-main .divParam #params .form {
+    .divParam #params .form, .responsiveB .divParam #params .form {
       height: 100%;
       margin: 0.25rem;
       background-color: var(--thema-white); }
-      .section-main .divParam #params .form form {
+      .divParam #params .form form, .responsiveB .divParam #params .form form {
         margin: auto; }
-    .section-main .divParam #params .headingMenu {
+    .divParam #params .headingMenu, .responsiveB .divParam #params .headingMenu {
       justify-content: space-between; }
-      .section-main .divParam #params .headingMenu .cross {
+      .divParam #params .headingMenu .cross, .responsiveB .divParam #params .headingMenu .cross {
         height: 24px;
         width: 32px;
         border: unset;
@@ -338,7 +437,7 @@ main {
         background-position: center;
         cursor: pointer;
         transition: 0.5s; }
-        .section-main .divParam #params .headingMenu .cross:hover {
+        .divParam #params .headingMenu .cross:hover, .responsiveB .divParam #params .headingMenu .cross:hover {
           background-color: var(--thema-dark); }
 
 .section-main .section {
@@ -353,7 +452,7 @@ main {
   width: 100%;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 100%; }
+  height: auto; }
   #navSpy a {
     display: flex;
     font-size: 0.72rem;
@@ -377,7 +476,9 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   width: 24px;
-  height: 24px; }
+  height: 24px;
+  display: flex;
+  margin: auto; }
 
 #informations {
   background-image: url("../assets/navbar/icon-info.svg"); }
@@ -446,8 +547,9 @@ main {
   width: auto;
   margin: auto;
   font-family: var(--font-normal);
-  display: flex;
+  display: grid;
   flex-direction: column;
+  grid-template-columns: 1fr 1fr;
   box-sizing: border-box; }
   .projet-list .projet-content {
     border: 1px solid var(--thema-dark-transp);
@@ -456,6 +558,7 @@ main {
     flex-direction: column-reverse;
     width: 50vh;
     color: var(--thema-darkest);
+    height: fit-content;
     opacity: 0.84;
     margin: 0.5rem; }
     .projet-list .projet-content .headBar {
@@ -1347,7 +1450,9 @@ input:checked + .slider:before {
   letter-spacing: 0.03rem;
   font-family: var(--font-normal);
   color: var(--thema-darker);
-  font-weight: normal; }
+  font-weight: normal;
+  padding-block-start: 0 !important;
+  padding-block-end: 0 !important; }
 
 .paraContent .heading3 {
   text-transform: uppercase; }
@@ -1392,7 +1497,7 @@ input:checked + .slider:before {
   text-transform: initial; }
 
 .heading1 {
-  font-size: 1.6rem;
+  font-size: 1.48rem;
   background-color: var(--thema-lightest);
   background-image: url("../assets/elements/background-heading.svg");
   background-blend-mode: overlay;
@@ -1400,9 +1505,9 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   background-position: 90%;
   color: var(--thema-darkest);
-  font-family: var(--font-contrail);
+  font-family: var(--font-normal);
+  letter-spacing: -0.03rem;
   height: 11.25vh;
-  text-transform: uppercase;
   opacity: 1; }
 
 .divHeading {
@@ -1550,16 +1655,22 @@ input:checked + .slider:before {
   text-decoration: unset;
   color: var(--thema-darkest);
   text-align: center;
-  font-family: var(--font-contrail); }
+  font-family: var(--font-normal);
+  text-transform: initial;
+  letter-spacing: -0.02rem;
+  opacity: 1; }
   #section5 > .frameDl .contactFrame .picto::before {
     content: "📚 "; }
+
+.contact .section-left .frameDl .contactFrame .content .picto {
+  opacity: 0.88; }
 
 .footer {
   height: 15vh;
   box-sizing: border-box;
   background-color: var(--thema-lightest);
-  background-image: url("../assets/textures/classy-fabric.png");
-  background-blend-mode: color-burn;
+  background-image: url("../assets/textures/cubes.png");
+  background-blend-mode: darken;
   display: flex;
   flex-direction: column;
   opacity: 0.92; }
@@ -1622,14 +1733,13 @@ input:checked + .slider:before {
     display: flex;
     box-sizing: border-box;
     width: 100%;
-    background-size: contain;
-    background-position-x: 32%;
+    background-size: 72%;
     text-align: center;
     margin-block-end: 0;
     margin-block-start: 0;
-    background-image: url("../assets/elements/logo-title-resp.svg") !important;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-image: url("../assets/elements/logo-title-resp.svg") !important; }
     .responsiveB .header .zoneTitle span:nth-child(1)::after {
       content: unset;
       display: none; }
@@ -1646,7 +1756,7 @@ input:checked + .slider:before {
       width: 11.25vh;
       height: 11.25vh; }
 
-  .responsiveB .presentation .divParam {
+  .responsiveB .divParam {
     position: fixed;
     top: 0;
     left: 0;
@@ -1657,25 +1767,33 @@ input:checked + .slider:before {
     display: flex;
     margin: initial;
     border: 1px solid var(--thema-dark-transp);
-    opacity: 0.64; }
-    .responsiveB .presentation .divParam .logoFrame {
+    opacity: 0.64;
+    flex-direction: column; }
+    .responsiveB .divParam .logoFrame {
       display: flex;
       justify-content: center;
       width: 24px;
       height: 24px; }
-      .responsiveB .presentation .divParam .logoFrame .logoParam {
+      .responsiveB .divParam .logoFrame .logoParam {
         box-sizing: border-box;
         margin: auto;
         width: 24px;
         height: 24px; }
-    .responsiveB .presentation .divParam #params {
+    .responsiveB .divParam .sect {
+      width: 100%;
+      height: max-content;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box; }
+    .responsiveB .divParam #params {
       z-index: 9999;
       max-height: initial;
       width: 100%; }
-      .responsiveB .presentation .divParam #params .headingMenu {
+      .responsiveB .divParam #params .headingMenu {
         width: auto;
         margin: initial; }
-      .responsiveB .presentation .divParam #params .form {
+      .responsiveB .divParam #params .form {
         overflow-y: auto;
         width: auto; }
 

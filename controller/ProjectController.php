@@ -10,6 +10,10 @@ class ProjectController
     { 
         require 'view/carte-visite.php';
     }
+    public function couch3d()
+    { 
+        require 'view/couch3d.php';
+    }
 }
 
 ?>

@@ -2,8 +2,8 @@
 session_start();
 
 $document = "#skills";
-$title = "tarik";
-$sub = "louatah";
+$title = REGULAR_TITLE;
+$sub = "";
 
 require ('object-list.php');
 require ('parts/header.php');

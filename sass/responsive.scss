@@ -4,8 +4,6 @@
 
     .responsiveB{
         height: 100%;
-        // max-height: 100vh;
-        // overflow: hidden;
     }
 
 
@@ -23,14 +21,13 @@
         // border:2px solid blue;
         box-sizing: border-box;
         width: 100%;
-        background-size: contain;
-        background-position-x: 32%;
+        background-size: 72%;
         text-align: center;
         margin-block-end: 0;
         margin-block-start: 0;
-        background-image:url('../assets/elements/logo-title-resp.svg')!important;
         background-position: center;
         background-repeat: no-repeat;
+        background-image:url("../assets/elements/logo-title-resp.svg")!important;
         span:nth-child(1)::after
         {
             content:unset;
@@ -56,7 +53,7 @@
 
     // params
 
-    .responsiveB .presentation .divParam{
+    .responsiveB .divParam{
         position: fixed;
         top:0;
         left:0;
@@ -67,15 +64,13 @@
         display: flex;
         margin:initial;
         border:1px solid var(--thema-dark-transp);
-        // flex-direction: initial;
         opacity: 0.64;
+        flex-direction: column;
         .logoFrame{
             display: flex;
             justify-content: center;
-            // border:2px solid red!important;
             width: 24px;
             height: 24px;
-            // border: 6px solid #fff;
             .logoParam{
                 box-sizing: border-box;
                 margin: auto;
@@ -83,6 +78,14 @@
                 height: 24px;
 
             }
+        }
+        .sect{
+            width: 100%;
+            height: max-content;
+            display: flex!important;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing:border-box;
         }
         #params{
             z-index: 9999;

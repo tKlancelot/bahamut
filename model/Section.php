@@ -34,9 +34,9 @@ class Section extends Main
         echo '<div class="picto" style="background-image:url(./assets/pictos/' . $source . ')"></div>';
     }
 
-    public function createTitle($content, $class)
+    public function createTitle($content, $class,$id=null)
     {
-        echo "<h4 class='$class'>$content</h4>";
+        echo "<h4 class='$class' id='$id'>$content</h4>";
     }
 
     public function createPara($content, $class = null)

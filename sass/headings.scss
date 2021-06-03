@@ -5,14 +5,14 @@
     justify-content: center;
     padding-top:0.2rem;
     border:2px solid var(--thema-dark-transp);
-    // text-transform: capitalize;
-    // background-color: var(--thema-dark-transp);
     font-size:1.2rem;
     opacity: 0.84;
     letter-spacing: 0.03rem;    
     font-family: var(--font-normal);
     color:var(--thema-darker);
     font-weight: normal;
+    padding-block-start: 0!important;
+    padding-block-end: 0!important;
 }
 
 .paraContent .heading3{
@@ -64,7 +64,7 @@
 }
 
 .heading1{
-    font-size: 1.6rem;
+    font-size: 1.48rem;
     background-color:var(--thema-lightest);
     background-image: url('../assets/elements/background-heading.svg');
     // background-image: url('../assets/elements/texture-dark.jpg');
@@ -73,11 +73,13 @@
     background-repeat: no-repeat;
     background-position: 90%;
     color:var(--thema-darkest);
-    font-family: var(--font-contrail);
+    font-family: var(--font-normal);
     // justify-content: flex-start;     
     // text-indent: 0.25rem;
+    letter-spacing: -0.03rem;
     height: 11.25vh;
-    text-transform: uppercase;
+
+    // text-transform: capitalize;
     opacity: 1;
 }
 
