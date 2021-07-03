@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
     <!-- favicon -->
     <link rel="icon" href="./assets/icons/temp-favicon.svg"/>   
@@ -16,14 +16,13 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
-
-
+    
 
     <!-- librairie three js -->
     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script> -->
+    <!-- <script src='https://unpkg.com/three@0.91.0/examples/js/loaders/GLTFLoader.js'></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/js/loaders/GLTFLoader.js'></script>
-    <!-- <script src='https://unpkg.com/three@0.91.0/examples/js/loaders/GLTFLoader.js'></script> -->
     <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     
 
@@ -37,7 +36,7 @@
             --thema-white:#0f2930f0;
             --thema-lightest:#0E1F23;
             --thema-light:#E1FBFF;
-            --thema-transp:#E1FBFF96;
+            --thema-transp:#e1fbff29;
             --thema:#b5e9ff;
             --thema-dark:#9bddf8;
             --thema-darker:#E9FBFF;
@@ -47,22 +46,25 @@
             --font-zilla:'Zilla Slab', serif;
             --font-normal:'DM Sans', sans-serif;
             --font-spectral:'Spectral', serif;
+            /* --font-nunito:'Nunito Sans', sans-serif; */
         }
         <?php elseif($_SESSION['mySwitch'] === "off"): ?>
         :root{     
             --thema-white:#ffffffe0;
             --thema-lightest:#e5faff;
-            --thema-light:#B5E9FF;
+            --thema-light:#dbf4ff;
             --thema:#B5E9FF;
             --thema-transp:#dafeffc4;
             --thema-dark:#9bddf8;
             --thema-darker:#1D7689;
-            --thema-darkest:#18475Ad4;
-            --thema-dark-transp:#2f7a9948;
+            --thema-darkest:#113c4ed4;
+            --thema-dark-transp:#2f7a9936;
             --font-contrail:'Contrail One', cursive;
             --font-zilla:'Zilla Slab', serif;
             --font-normal:'DM Sans', sans-serif;
+            /* --font-normal:'Roboto', sans-serif; */
             --font-spectral:'Spectral', serif;
+            --font-nunito:'Nunito Sans', sans-serif;
         }
         <?php endif; ?>
     <?php else: ?>
@@ -74,8 +76,8 @@
         --thema-transp:#dafeffc4;
         --thema-dark:#9bddf8;
         --thema-darker:#1D7689;
-        --thema-darkest:#18475Ad4;
-        --thema-dark-transp:#2f7a9948;
+        --thema-darkest:#113c4ed4;
+        --thema-dark-transp:#2f7a9936;
         --font-contrail:'Contrail One', cursive;
         --font-zilla:'Zilla Slab', serif;
         --font-normal:'DM Sans', sans-serif;
@@ -88,10 +90,6 @@
     }
 </style>
 
-
-
-
-<script src="./js/responsive.js" type="module"></script>
 <script src="./js/scrollspy.js" type="module"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -101,7 +99,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-N91KK6BTFG');
 </script>
 

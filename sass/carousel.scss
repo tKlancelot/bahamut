@@ -1,4 +1,4 @@
-//desktopcss desktop carousel parcours
+//desktop css desktop carousel parcours
 
 #section2{
     display: flex;
@@ -18,7 +18,7 @@
     display: flex;  
     box-sizing: border-box;
     width: auto;
-    margin: 0% 1.5%;
+    margin: $margin0 $margin;
     height: 100%;
     border:1px solid var(--thema-darker);
 }
@@ -73,6 +73,26 @@
             height: 40vh;
         }
     }
+}
+
+#carousel0 .carousel .carousel__container .carousel__item .pict{
+    background-size:cover;
+    background-color:#e2fbff6b;
+    background-blend-mode: color-dodge;
+    .content .paraContent
+    {
+        margin:auto 5%;
+        background-color: #2f7a9966;
+        height: 84%;
+        p, .heading3{
+            font-size: 0.76rem;
+            color:#0f2930f0;
+        }
+        .heading3{
+            font-size: 1rem;
+        }
+    }
+
 }
 
 
@@ -180,7 +200,6 @@
     background-size:100%;
     transform: scale(-0.8);
     right:auto;
-    // left:20px;
 }
 
 .carousel__pagination{
@@ -215,7 +234,7 @@
 }
 
 
-#carousel4, #carousel5, #carousel6{
+#courseCarousel, #carousel4, #carousel5, #carousel6{
     margin: auto;
     display: flex;
     box-sizing: border-box;
@@ -264,20 +283,31 @@
                             border:1px solid var(--thema-dark-transp);
                             margin:2% 5% auto;
                             background-color: var(--thema-white);
-                            letter-spacing: 0.05rem;
+                            color:var(--thema-darkest);
+                            letter-spacing: $letter-spacing-m;
+                            opacity: 0.84;
                         }
                     }
                     img, p{
                         display: flex;
                         margin: auto;
                     }
-                    p{
+                    .paraContent p{
                         text-indent: 1rem;
-                        margin:auto 5%;
+                        display: flex;
+                        align-items: center;
+                        background-color: var(--thema-white);
                         text-align: justify;
-                        font-size: 0.8rem;
+                        margin:auto 5%;
+                        height: 28%;
+                        font-size: 0.82rem;
+                        letter-spacing: $letter-spacing-m;
                         color:var(--thema-darkest);
-
+                        padding:0.5rem;
+                        opacity: 0.88;
+                    }
+                    .paraContent .heading3{
+                        font-size: 1.06rem!important;
                     }
                 }
                 .content{
@@ -290,11 +320,28 @@
     }
 }
 
+
+
+#courseCarousel .carousel .carousel__container .carousel__item .pict,
 #carousel4 .carousel .carousel__container .carousel__item .pict{
-    background-color:var(--thema-transp);
-    background-image: url('../assets/textures/triangles.png');
-    background-blend-mode: color-burn;
-    background-size: auto;
+    background-color:#f0fdfed4;
+    background-blend-mode: color-dodge;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .content .paraContent{
+        .heading3{
+            font-family: "Mate", sans-serif;
+            font-weight: bolder;
+            opacity: .64;
+        }
+        .heading3, p{
+            // font-family: "Mate", sans-serif;
+            background-color:#ffffff76;
+            color:#113c4ef0;
+            font-size: 0.88rem;
+        }
+    }
 }
 
 #carousel5{
@@ -322,6 +369,13 @@
                 background-color: var(--thema);
                 background-image: url('../assets/textures/hexellence.png');
                 background-blend-mode: color-dodge;
+            }
+            .logo2 .picto{
+                transition: 0.5s;
+                &:hover{
+                    background-color: var(--thema-dark-transp);
+                    background-blend-mode: luminosity;
+                }
             }
         }
     }
@@ -355,7 +409,7 @@
                         // font-family: var(--font-zilla);
                         font-weight: normal;
                         font-style: italic;
-                        letter-spacing: 0.06rem;
+                        letter-spacing: $letter-spacing-m;
                         text-transform: uppercase;
                         margin:auto auto 1rem;
                     }

@@ -81,12 +81,12 @@ class Section extends Main
                     if($categ == true){
                         $this->createPara($array[$index]['categ'],'');
                     }
-
-
                 $this->endDiv();
             $this->endDiv();
         $this->endDiv();
     }
+
+
 
     public function createThumbnailsCarousel($array, $index, $index2)
     {

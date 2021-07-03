@@ -5,8 +5,6 @@
 export function Config()
 {
     let allSection = document.querySelectorAll('.sect');
-    let navBar = document.querySelector('#navSpy');
-    // let slideShow = document.getElementById('slideShow');
     let myTitle = document.querySelector('.responsiveB .zoneTitle');
 
     if (window.matchMedia("(min-width: 600px)").matches) 
@@ -15,14 +13,13 @@ export function Config()
         allSection.forEach(element => 
             element.style.display = "none"    
         );
-        navBar.style.display = "none";
+        // navBar.style.display = "none";
     }
     else 
     {
         allSection.forEach(element => 
             element.style.display = "initial"
         );
-        // slideShow.style.display = "none";
         console.log(myTitle);
         $(myTitle).text('');
     }

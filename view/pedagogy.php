@@ -3,7 +3,7 @@ session_start();
 
 $document = "#pedagogy";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
 require ('parts/header.php');
 

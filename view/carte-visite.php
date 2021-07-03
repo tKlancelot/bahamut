@@ -2,9 +2,9 @@
 
 session_start();
 
-$document = "#planete-3d";
+$document = "carte de visite";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
 require ('parts/header.php');
 
@@ -118,4 +118,16 @@ require ('parts/footer.php');
 
 ?>
 
-<script src='js/carte-visite.js' type="module"></script>
+<script type="module">
+
+    import { Activate } from "./js/Activate.js";
+    import { PositionItem } from "./js/PositionItem.js";
+
+    Activate(4,'.menu ul li a');
+    PositionItem(4);
+    
+</script>
+
+<script src='js/carte-visite.js' type="module">
+
+</script>

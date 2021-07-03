@@ -3,7 +3,7 @@ session_start();
 
 $document = "#projets";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
 require ('parts/header.php');
 require ('object-list.php');
@@ -16,7 +16,7 @@ $main->startFrame('projet');
     <?php for($i = 0; $i < count($projects);$i++): ?>
     <div class="projet-content">
         <a href="<?= $projects[$i]['link']?>">go to project</a>
-        <p><i>ojectif : </i><?= $projects[$i]['goal']?></p>
+        <p><i>objectif : </i><?= $projects[$i]['goal']?></p>
         <span><?=$projects[$i]['span']?></span>
     </div>
     <?php endfor; ?>
@@ -32,8 +32,12 @@ require ('parts/footer.php');
 
 
 <script type='module'>
+
 import { Activate } from "./js/Activate.js";
+import { PositionItem } from "./js/PositionItem.js";
+
 Activate(4,'.menu ul li a');
+PositionItem(4);
 
 let projectLinks = document.querySelectorAll('.projet-list .projet-content');
 
@@ -56,19 +60,19 @@ projectLinks.forEach((element)=>{
     $(para).hide();
     $(link).hide();
     $(span).hide();
-    $(arrowButton).click(function(){
+    $(headBar).click(function(){
         if(toggled == 0)
         {
             $(para).slideToggle("fast");
             $(link).slideToggle("fast");
-            $(this).css('background-image','url("./assets/icons/icon-minus.svg")');
+            $(arrowButton).css('background-image','url("./assets/icons/icon-minus.svg")');
             toggled = 1;
         }
         else
         {
             $(para).slideToggle('fast');
             $(link).slideToggle("fast");
-            $(this).css('background-image','url("./assets/icons/icon-plus.svg")');
+            $(arrowButton).css('background-image','url("./assets/icons/icon-plus.svg")');
             toggled = 0;
         }
     })

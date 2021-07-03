@@ -3,7 +3,7 @@ session_start();
 
 $document = "#skills";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
 require ('object-list.php');
 require ('parts/header.php');
@@ -30,8 +30,11 @@ require ('parts/footer.php');
 <script type="module">
 
 import { Activate } from "./js/Activate.js";
+import { PositionItem } from "./js/PositionItem.js";
 import { Carousel } from "./js/course.js";
+
 Activate(3,'.menu ul li a');
+PositionItem(3);
 
 /* La largeur minimum de l'affichage est 600 px inclus */
 let myCar5 = new Carousel(document.querySelector('#carousel6'),{

@@ -18,11 +18,11 @@
 .form-tarik{
   // border:2px solid var(--thema);
   font-family: var(--font-normal);
-  margin:1.5%;
+  margin:$margin;
   padding:1%;
   .section-label{
     color:var(--thema-darker);
-    letter-spacing: 0.04rem;
+    letter-spacing: $letter-spacing-m;
     background-color: initial;
   }
   .section-input{
@@ -57,6 +57,10 @@
       border-radius: 0;
     }
   }
+}
+
+.form-tarik .section-input input, .form-tarik .section-input textarea{
+  padding:.5rem;
 }
 
 .form form select{
@@ -170,4 +174,9 @@
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .contacts #erreur{
+    font-size: 0.8rem;
+    letter-spacing: $letter-spacing-m;
   }

@@ -7,6 +7,11 @@ class DefaultController
         require 'view/homepage.php';
     }
 
+    public function realHome()
+    { 
+        require 'view/real-home.php';
+    }
+
     public function diapo()
     { 
         require 'view/diapo.php';

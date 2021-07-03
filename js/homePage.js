@@ -2,10 +2,11 @@ const chemin = "./assets/slideshow-intro/";
 
 
 class Scene {
-    constructor(name,title,para2,source,numero,displayMode) {
+    constructor(name,title,para2,source,numero,displayMode,para3) {
         this.name = name;
         this.title = title;
         this.para2 = para2;
+        this.para3 = para3;
         this.source = source;
         this.numero = numero;
         this.displayMode = displayMode;
@@ -32,37 +33,47 @@ class Scene {
     showPara(cadre)
     {
         cadre.textContent = this.para2;
+        $('#second').hide();
+    }
+    showSecondPara(cadre)
+    {
+        if(this.para3)
+        {
+        cadre.textContent = this.para3;
+        $(cadre).show();
+        if (window.matchMedia("(min-width: 600px)").matches) 
+            {
+                $(cadre).css('margin','0 auto auto');
+                console.log(cadre);
+            }
+        }
     }
 }
 
 
-// creons un loader
-let thisBody = document.querySelector('body');
-console.log(thisBody);
-$(thisBody).hide();
-window.onload = loadPage;
-
-function loadPage(){
-    $(thisBody).fadeIn(1800);
-}
+// document.onload = getDocument;
 
 let pictureFrame = document.querySelector('.picture .under');
 let legendFrame = document.querySelector('.frame-2 .under .under-frame h4');
 let paraFrame = document.querySelector('.frame-2 .under .under-frame p');
+let paraFrame2 = document.querySelector('#second');
 let optionFrame = document.querySelector('.frame-3 .under-frame');
 let prevButton = document.querySelector('.under-frame #prev');
 let nextButton = document.querySelector('.under-frame #next');
 let currentIndex = 0;
+$(paraFrame2).hide();
+
 
 
 let scene1 = new Scene(
     'portrait',
     'Salutations',
-    'Je m\'appelle Tarik et le développement web est ma passion'
+    'Je m\'appelle Tarik et je suis passionné par le développement web.'
     +'\n\r',
     chemin+'portrait.jpg',
     0,
-    'cover'
+    'cover',
+    'Chacun des projets que j\'entreprends me permet de révéler ma créativité et mon goût pour un travail de qualité et de précision.'
 )
 let scene2 = new Scene(
     'canapé 3d au format gltf',
@@ -103,9 +114,9 @@ let scene6 = new Scene(
     'configurateur 3d',
     'Création d\'un configurateur 3d à l\'aide de Three.js',
     'Exemple d\'utilisation de la librairie Three.js',
-    chemin+'configurateur-3d.svg',
+    chemin+'configurateur-3d-2.png',
     3,
-    'contain'
+    'cover'
 )
 
 let scene7 = new Scene(
@@ -139,6 +150,7 @@ function handleAfter(){
     sceneArray[currentIndex].display(pictureFrame);
     sceneArray[currentIndex].showTitle(legendFrame);
     sceneArray[currentIndex].showPara(paraFrame);
+    sceneArray[currentIndex].showSecondPara(paraFrame2);
     bullets[currentIndex].classList.add('bullet-active');
 }
 
@@ -193,7 +205,6 @@ let myInt;
 pictureFrame.addEventListener("click",function(){
     if (window.matchMedia("(min-width: 600px)").matches)
     {
-
         // recuperer le titre
         let titre = sceneArray[currentIndex].getSceneInfo();
 
@@ -320,7 +331,7 @@ autoplayButton.addEventListener("click",function(){
                 currentIndex = 0;
                 handleAfter();
             }
-        },6400)
+        },8000)
     }
 })
 
@@ -343,11 +354,10 @@ function autoplay()
             currentIndex = 0;
             handleAfter();
         }
-    },6400)
+    },8000)
 }
 
 autoplay();
-
 
 // formulaire action
 

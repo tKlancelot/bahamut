@@ -3,7 +3,7 @@ session_start();
 
 $document = "#parcours";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
 require ('parts/header.php');
 
@@ -13,20 +13,28 @@ $main->startFrame('course');
 
 require('object-list.php');
 
-define("CHEMIN","./assets/carousel/");
 
 $section2 = new Section();
 
+?>
 
-$section2->startDiv('cadreCarousel');
-    $section2->startDiv('','carousel4');
-    for ($i = 0;$i < count($carouselItems);$i++):
-        $section2->createCourseCarousel($carouselItems,$i,true,false);
-    endfor;
-    $section2->endDiv();
-$section2->endDiv();
+<div class='cadreCarousel'>
+    <div id="carousel4">
+        <?php for ($i = 0 ; $i < count($carouselItems); $i++): ?>
+        <div class="pict" style="background-image:url('./assets/carousel/<?=$carouselItems[$i]["source"];?>')">
+            <div class="content">
+                <div class="paraContent">
+                    <h3 class='heading3'><?=$carouselItems[$i]['title']?></h3>
+                    <p><?=$carouselItems[$i]['content']?></p>
+                    <p><?=$carouselItems[$i]['content2']?></p>
+                </div>
+            </div>
+        </div>
+        <?php endfor ?>  
+    </div>
+</div>
 
-
+<?php
 ?>
 <?php
 
@@ -40,15 +48,25 @@ require ('parts/footer.php');
 <script type="module">
 
 import { Activate } from "./js/Activate.js";
+import { PositionItem } from "./js/PositionItem.js";
 import { Carousel } from "./js/course.js";
-Activate(2,'.menu ul li a');
 
-/* La largeur minimum de l'affichage est 600 px inclus */
-let myCar5 = new Carousel(document.querySelector('#carousel4'),{
-    slidesToScroll : 1,
-    slidesVisible : 4,
-    infinite : true,
-    // pagination : true
-})
+Activate(2,'.menu ul li a');
+PositionItem(2);
+
+    // carousel en mode desktop
+    let myCar5 = new Carousel(document.querySelector('#carousel4'),{
+        slidesToScroll : 1,
+        slidesVisible : 4,
+        infinite : true,
+        isMobile : true
+        // pagination : true
+    })
+
+
+// recuperer les carousel item
+
+// let carouselItems = document.querySelectorAll('#carousel4 .carousel .carousel__container .carousel__item .pict');
+// console.log(carouselItems);
 
 </script>

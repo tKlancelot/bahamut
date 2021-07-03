@@ -3,7 +3,7 @@ session_start();
 
 $document = "#mentions légales";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
 require ('parts/header.php');
 require ('object-list.php');
@@ -48,7 +48,10 @@ require ('parts/footer.php');
 <script type="module">
 
 import { Activate } from "./js/Activate.js";
-Activate(1,'.menu-footer ul li a');
+import { PositionItem } from "./js/PositionItem.js";
+
+Activate(6,'.menu ul li a');
+PositionItem(6);
 
 $('.frame-mention').css('display','none');
 

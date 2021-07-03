@@ -5,18 +5,18 @@
     position: absolute;
     font-family:var(--font-normal);
     font-size: 0.84rem;
-    top: 16%;
-    left: 0.5%;
-    margin:0.25rem;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
     z-index: 999;
-    width: 10%;
+    width: auto;
     box-sizing: border-box;
     .logoFrame{
         display: flex;
         // border:6px solid #fff;
         height: 52px;
         width: 52px;
-        background-color: var(--thema-lightest);
+        background-color: var(--thema-transp);
         // cursor: move;
         transition: 0.5s;
         .logoParam{
@@ -40,41 +40,37 @@
         max-height: 60vh;
         width: 100%;
         .form, .headingMenu{
-            background-color: var(--thema-white);
+            background-color: var(--thema-transp);
             height: auto;
             display: flex;
             justify-content: center;
             box-sizing: border-box;
+            flex-wrap: wrap;
             align-items: center;
-            margin:0.5rem;
-            h5{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                font-weight: normal;
-                text-transform: uppercase;
-                margin-block-end: 0;
-                margin-block-start: 0;
+            flex-direction: column-reverse;
+            // margin:0.5rem;
                 a{
+                    font-weight: normal;
+                    margin-block-end: 0;
+                    margin-block-start: 0;
                     font-family: var(--font-contrail);
                     color:var(--thema-darkest);
                     text-decoration: unset;
                     cursor: pointer;
                     display: flex;
                     justify-content: center;
-                    height: 24px;
                     margin: 0;
-                    padding: 0;
+                    padding: 0.5rem;
                     align-items: center;
                     width: 100%;
-                    transition: 0.5s;
+                    flex-basis: 50%;
+                    box-sizing: border-box;
+                    transition: 0.3s;
                     &:hover{
                         background-color:var(--thema-darker);
                         color:var(--thema-white);
                     }
                 }
-            }
         }   
         .form{
             // overflow-y: scroll;
@@ -83,23 +79,30 @@
             background-color: var(--thema-white);
             form{
                 margin: auto;
-                // border:1px solid var(--thema-dark-transp);
             }
         }
         .headingMenu{
-            justify-content: space-between;
+            justify-content: center;
+            width: 6.4vw;
+            align-items: flex-end;
             .cross{
-                height: 24px;
-                width: 32px;
+                position: absolute;
+                top:0;
+                height: 16px;
+                width: 16px;
                 border:unset;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
                 // border:1px solid var(--thema-dark-transp);
                 background-color:var(--thema-dark-transp);
                 background-image: url('../assets/elements/white-cross.svg');
                 background-position: center;
+                background-repeat: no-repeat;
                 cursor: pointer;
                 transition: 0.5s;
                 &:hover{
-                    background-color:var(--thema-dark);
+                    background-color:var(--thema-darker);
                 }
             }
         
@@ -118,7 +121,7 @@
     width:min-content;
     z-index: 9999;
     display: flex;
-    flex-direction: column;
+    flex-direction: initial;
     width: 100%;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -132,36 +135,27 @@
         color:var(--thema-darkest);
         align-items: center;
         transition: 0.5s;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        letter-spacing: -0.2rem;
-        padding-top:0.25rem;
-        padding-bottom:0.25rem;
-        // height: 16.6%;  
+        flex-basis: 33%;
+        letter-spacing: $letter-spacing-m;  
     }
-    // #sect0{
-    //     background-image:url('../assets/navbar/icon-home.svg');
-    // }
-    // #sect1{
-    //     background-image:url('../assets/navbar/icon-thumbnails.svg');
-    //     background-size: 120%;
-    // }
-    // #sect2{
-    //     background-image:url('../assets/navbar/icon-course.svg');
-    // }
-    // #sect3{
-    //     background-image:url('../assets/navbar/icon-skills.svg');
-    //     background-size: 110%;
-    // }
-    // #sect4{
-    //     background-image:url('../assets/navbar/icon-testi.svg');
-    //     background-size: 120%;
-    // }
-    // #sect5{
-    //     background-image:url('../assets/navbar/icon-contact.svg');
-    //     background-size: 120%;
-    // }
 }
+
+.divParam .logoFrame{
+    border:1px solid var(--thema-dark-transp);
+    &:hover{
+        cursor: pointer;
+        border:1px solid var(--thema-darkest);
+        box-shadow: 1px 1px 1px var(--thema-dark-transp) inset,-1px -1px 1px var(--thema-dark-transp) inset;
+    }
+    &:hover .logoParam{
+        cursor: pointer;
+    }
+}
+
+.divParam .headingMenu{
+    border:1px solid var(--thema-dark-transp);
+}
+
 
 #toggleMenu, #informations{
     background:unset;
@@ -183,11 +177,7 @@
 
 .responsiveB .presentation #Pres .divParam .sect{
     display: flex!important;
-    height: 100%;
     flex-direction: column;
-    // border:2px solid red;
-    // flex-direction: column;
-    // padding-top:0.16rem;
 }
 
 
@@ -206,7 +196,7 @@
     box-sizing: border-box;
     display: flex;
     height: auto;
-    margin:1.5%;
+    margin:$margin;
     background-color: var(--thema-white);
     flex-direction: column;
     border-radius: 1px;
@@ -285,8 +275,14 @@
             flex-direction: row;
             justify-content: space-between;
             text-transform: uppercase;
-            letter-spacing: 0.04rem;
+            letter-spacing: $letter-spacing-m;
             align-items: center;
+            transition: 0.48s;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--thema-transp);
+                color:var(--thema-darkest);
+            }
             .toggle{
                 background:unset;
                 border:unset;
@@ -296,6 +292,7 @@
                 height: 32px;
             }
         }
+
         p, .headBar, a{
             padding-left:0.5rem;
             font-size: 1rem;

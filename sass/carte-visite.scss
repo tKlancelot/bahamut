@@ -24,7 +24,7 @@
 
 .dragged{
     user-select: none;
-    border-radius: 32%; 
+    border-radius: 8%; 
     width:44px;
     height:44px;
 }
@@ -48,10 +48,9 @@
 }
 
 .zone4{
-    background-color:var(--thema-dark);
-    background-image: url('../assets/textures/hexellence.png');
-    background-blend-mode: color-dodge;
-    filter:brightness(105%);
+    // background-color:var(--thema);
+    // background-image: url('../assets/textures/triangles.png');
+    background-blend-mode: color-burn;
     width: 100%;
     margin:auto;
 }
@@ -62,8 +61,9 @@
     border:1px solid var(--thema-dark-transp);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap:1rem;
-    border-radius:50%;
+    grid-gap:0.5rem;
+    padding: 0.25rem;
+    // border-radius:50%;
 
 }
 
@@ -92,7 +92,7 @@
 }
 
 .case-droppable{
-    border-radius: 32%;
+    border-radius: 8%;
 }
 
 .divText, .draggable{
@@ -130,7 +130,7 @@
         height: 90%;
         border:1px solid var(--thema-dark-transp);
         margin: 0.5rem auto;
-        width: 100%;
+        width: 80%;
         box-sizing: border-box;
         display: flex;
         padding: 0.25rem;
@@ -155,9 +155,9 @@
                 border:1px solid var(--thema-dark-transp);
                 align-items: center;
                 justify-content: center;
-                background-color:var(--thema-lightest);
-                background-image: url('../assets/textures/cubes.png');
-                background-blend-mode: darken;
+                // background-color:var(--thema-transp);
+                // background-image: url('../assets/textures/cubes.png');
+                // background-blend-mode: darken;
                 .zone-titre{
                     width: 100%;
                     padding: initial;
@@ -165,7 +165,7 @@
                         color:var(--thema-darkest);
                         font-size:1.12rem;
                         font-weight: normal;
-                        letter-spacing: 0.06rem;
+                        letter-spacing: $letter-spacing-m;
                         text-transform: uppercase;
                     }
                 }
@@ -185,13 +185,14 @@
         justify-content: center;
         align-items: center;
         display: flex;
-        margin:0 0 0.5rem;
+        margin: 0.5rem auto;
+        width: 80%;
         .dragLegend{
             height: 100%;
             display: flex;
             display: flex;
             justify-content: center;
-            width: 100%;
+            width: 80%;
             .divText{
                 display: flex;
                 align-items: center;
@@ -201,7 +202,7 @@
                 height: 50%;
                 width: 50%;
                 margin: auto;
-                border:1px solid var(--thema-darkest);
+                // border:1px solid var(--thema-darkest);
                 color:var(--thema-darkest);
             }
         }

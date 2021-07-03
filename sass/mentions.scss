@@ -11,35 +11,35 @@
         }
     }
     .content{
-        margin:1.5%;
+        margin:$margin;
         border:1px solid var(--thema-dark-transp);
         flex-basis: 80%;
         overflow-y: scroll;
         font-family: var(--font-normal);
         .para, .heading5{
             color:var(--thema-darkest);
-            margin:auto 1.5%;
+            margin:$margin;
             text-align: justify;
         }
         .heading5{
-            letter-spacing: 0.04rem;
+            letter-spacing: $letter-spacing-m;
             font-size: 1rem;
             height: 4vh;
             display: flex;
             align-items: center;
             opacity: 0.76;
-            margin:1.5%;
+            margin:$margin;
             border-top:1px solid var(--thema-dark-transp);
             border-bottom:1px solid var(--thema-dark-transp);
         }
         hr{
-            margin:1.5%;
+            margin:$margin;
             border-color:var(--thema-dark-transp);
             border-top:none;
         }
     }
     .panneau{
-        margin:1.5%;
+        margin:$margin;
         // border:1px solid var(--thema-dark-transp);
         border-top:4px solid var(--thema-dark-transp);
         border-bottom:4px solid var(--thema-dark-transp);

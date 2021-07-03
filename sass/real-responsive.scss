@@ -1,0 +1,272 @@
+
+@media screen and (max-width:640px) {
+
+    $font-size-tel : 0.8rem;
+
+    .theBody{
+        max-width: 100vw;
+    }
+
+    /**************************/
+    /********* header *********/
+    /**************************/
+
+    .theBody .header{
+        height: 50vh;
+        margin:2.25%;
+        background-color: var(--thema-white);
+        background-image: url('../assets/textures/light-wool.png');
+        box-shadow: initial;
+    }
+
+    .theBody .header .zoneTitle span{
+        &::first-letter{
+            font-size: 4.6rem;
+            z-index: 9999;
+            pointer-events: none;
+        }
+    }
+
+    .theBody .header .zoneTitle{
+        background-image: unset;
+        &:hover{
+            letter-spacing: $letter-spacing-s;
+        }
+        &:hover ::after{
+            transform: translate(50px);
+            -webkit-text-stroke-width: 0rem;   
+        }
+        &::before{
+            content:'';
+            width: 32px;
+            height: 12vh;
+            border:32px solid var(--thema-dark-transp);
+            border-top:none;
+            border-bottom: none;
+            transform: skewX(-23deg);
+            position: absolute;
+            z-index: -50;
+            transition: 0.8s;
+        }
+    }
+
+    .theBody .header .zoneTitle:hover::before{
+        pointer-events: none;
+        border-color: var(--thema-dark-transp);
+        transform: translate(-96px) skewX(-23deg);
+        width: 144px;
+    }
+
+    .theBody .header .zoneTitle > span:nth-child(2)
+    {
+        &::after{
+            content:'développeur web';
+            pointer-events: none;
+            font-size: 1.24rem;
+            position: absolute;
+            top:5.6rem;
+            margin-left:-9%;
+            font-weight: bolder;
+            letter-spacing: $letter-spacing-s;
+            transition:1.6s;
+            -webkit-text-fill-color:#113c4ed4;
+            -webkit-text-stroke-width: 0rem;
+        }
+
+    }
+
+    .theBody .header .zoneTitle{
+        max-width: 100vw;
+        width: 100%;
+        font-size: 1.8rem;
+        pointer-events: none;
+        span:nth-child(2)::after{
+            // display: none;  
+            top: 32%;
+            margin-left: -42%;
+            font-size: 1rem;
+        }
+        span{
+            &::first-letter{
+                font-size: 3.6rem;
+            }
+        } 
+    }
+
+    /**************************/
+    /******* section 0 ********/
+    /**************************/
+
+    #section0 .frame-1{
+        height: 50vh;
+    }
+
+    #section0{
+        display:flex;
+        .presentation{
+            height: auto;
+            .section{
+                width: auto;
+                display: flex;
+                &:hover .frame-2, &:hover .frame-1{
+                    border:unset;
+                    box-shadow: unset;
+                }
+                .frame-3{
+                    margin-top: initial;
+                    width: 100%;
+                    .under-frame{
+                        padding:unset;
+                    }
+                }
+                .frame-2{
+                    height: 50%;
+                }
+            }
+        }
+    }
+
+    #section0 .presentation .frame-1,#section0 .presentation .frame-2{
+        width: auto;
+        flex-basis: 100%;
+        box-shadow: unset;
+        border:unset;
+        .under .under-frame{
+            width: auto;
+            p, h4{
+                margin:1rem;
+            }
+            p{
+                font-size:$font-size-tel;
+            }
+        }
+    }
+
+    #section1 .block{
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-x: hidden!important;
+        max-width: 100vw;
+    }
+
+
+
+    #section1 .block .frame30{
+        // margin:$margin;
+        margin:0.5rem 1rem;
+        &:nth-child(3){
+            // border:4px solid red;
+            height: 30vh;
+            // transform: translateY(-15vh);
+        }
+
+    }
+
+
+
+    .sect .heading2{
+        font-size: 1.8rem;
+        font-family: 'Contrail One';
+        opacity: 0.24;
+        letter-spacing: 0.16rem;
+        font-weight: 600;
+        height: 16vh;
+    }
+
+
+
+    .theBody .block > .heading3, #section3 .heading3, #section4 .heading3{
+        height: 16vh;
+        font-size:1.08rem;
+        letter-spacing: 0.02rem;
+    }
+
+    .theBody #section1 .block > .heading3{
+        // transform: translateY(-15vh);
+        // height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 1rem;
+        border-left: none;
+        border-right: none;
+        // box-shadow:
+        // 0px 1px 1px inset var(--thema-dark-transp),
+        // -1px -1px 1px inset var(--thema-dark-transp);
+    }
+
+    #section4 .heading3{
+        font-size: 0.9rem;
+        letter-spacing: 0.06rem;
+        border:unset;
+    }
+
+    #section4 > .heading3{
+        font-size:1.08rem;
+        letter-spacing: 0.02rem;
+    }
+
+    
+    .theBody .block > .heading3, #section3 > h4:nth-child(2), #section3 > h4:nth-child(4), #section3 > h4:nth-child(6), #section4 > .heading3{
+        font-family: 'Poppins', sans-serif;
+        color:var(--thema-darkest);
+        color: var(--thema-darkest);
+        opacity: 0.48;
+        font-size: 1.24rem;
+        font-weight: 500;
+        letter-spacing: 0.06rem;
+    }
+
+
+    .theBody #section1 .heading3{
+        text-align: center;
+    }
+
+    .theBody .frame30 h4{
+        font-size: 1.18rem;
+        height: 8vh;
+    }
+
+    .theBody .frame30 .picto{
+        background-size: 36%;
+    }
+
+    .theBody #section5 .frame30{
+        margin:1rem;
+    }
+
+
+    #section3 .grid .heading3{
+        height: initial;
+        font-size: initial;
+        letter-spacing: initial;
+    }
+
+
+    // carousel course
+
+    #courseCarousel{
+        max-width: 100vw;
+        margin:0 $margin $margin $margin;
+        .carousel .carousel__container .carousel__item{
+            margin:0.1rem;
+            height: 64vh;
+            .pict .content .paraContent .para{
+                font-size: $font-size-tel;
+                height: 32%;
+            }
+        }
+    }
+
+
+    .theBody .footer{
+        background-image: unset;
+        border:unset;
+        box-shadow: unset;
+        height: 40vh;
+        background-color: unset;
+    }
+
+
+}

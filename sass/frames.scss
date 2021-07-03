@@ -3,7 +3,7 @@
     background-color: var(--thema);
     background-image: url('../assets/textures/green-gobbler.png');
     background-blend-mode: color-dodge;
-    margin:1.5%;
+    margin:$margin;
     display: flex;
     flex-direction: column-reverse;
     .picto{
@@ -18,10 +18,9 @@
         justify-content: center;
         text-transform: capitalize;
         font-family: var(--font-zilla);
-        font-size:1.4rem;
-        color:var(--thema-dark);
+        font-size:1.32rem;
+        color:var(--thema-darker);
         font-style: italic;
-        // opacity: 0.8;
     }
 }
 
@@ -35,7 +34,7 @@
         justify-content: flex-end;
         padding-right:0.5rem;
         font-weight: normal;
-        letter-spacing: 0.04rem;
+        letter-spacing: $letter-spacing-m;
     }
     p{
         margin: 12.5%;
@@ -45,28 +44,26 @@
     }
 }
 
-.frame24{
-    // border:4px solid red;
-    background-image: url("../assets/textures/cubes.png");
-    background-color: var(--thema);
+.frame24, .frame24-reverse{
     background-blend-mode: color-dodge;
-    background-size: 20%;
+    background-size: 16%;
+    background-color: var(--thema);
+    background-image: url('../assets/textures/green-gobbler.png');
 }
 
 
 .frame50, .frameDl{
     // border:2px solid blue;
     box-sizing: border-box;
-    margin: 1.5%;
+    margin:$margin;
     display: flex;
     flex-wrap: wrap;
-    .contactFrame{
+    .contactFrame{        
         display: flex;
         margin: auto;
         box-sizing: border-box;
         width: 48%;
         height: 48%;
-        // border:1px solid var(--thema-dark-transp);
         .content{
             width: 100%;
             height: 100%;
@@ -116,15 +113,6 @@
 }
 
 
-.frame24-reverse{
-    background-color: var(--thema-dark);
-    background-image: url('../assets/textures/green-gobbler.png');
-}
-
-
-
-
-
 #section5 > .frameDl .contactFrame{
     width: 100%;
     height: 100%;
@@ -150,13 +138,35 @@
     text-align: center;
     font-family: var(--font-normal);
     text-transform: initial;
-    letter-spacing: -0.02rem;
+    letter-spacing: $letter-spacing-s;
     opacity: 1;
     &::before{
         content:"📚 ";
+        text-indent: 0.5rem;
     }
 }
 
 .contact .section-left .frameDl .contactFrame .content .picto{
     opacity: 0.88;
+}
+
+.presentation .section .frame-1, .presentation .section .frame-2{
+    transition: 0.5s;
+}
+
+.presentation .section:hover .frame-1,.presentation .section:hover .frame-2{
+    border:1px solid var(--thema-darkest);
+}
+.presentation .section:hover .frame-1{
+    border-right:none;
+    box-shadow: 1px 1px 1px var(--thema-dark-transp) inset,1px -1px 1px var(--thema-dark-transp) inset;
+}
+
+.frame-1 .picture .under:hover{
+    cursor: pointer;
+}
+
+.presentation .section:hover .frame-2{
+    border-left:none;
+    box-shadow: -1px -1px 1px var(--thema-dark-transp) inset,-1px 1px 1px var(--thema-dark-transp) inset;
 }

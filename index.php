@@ -13,7 +13,8 @@ switch($_GET)
 {
     case $_GET['controller'] == "default" && $_GET['action'] == "intro":
         $controller = new DefaultController();
-        $controller->homepage();
+        // $controller->homepage();
+        $controller->realHome();
         break;   
     case $_GET['controller'] == "default" && $_GET['action'] == "vignettes":
         $controller = new DefaultController();
@@ -70,6 +71,10 @@ switch($_GET)
     case $_GET['controller'] == "projets" && $_GET['action'] == "couch3d":
         $controller = new ProjectController();
         $controller->couch3d();
+        break;   
+    case $_GET['controller'] == "default" && $_GET['action'] == "responsive":
+        $controller = new DefaultController();
+        $controller->homepage();
         break;   
 }
 

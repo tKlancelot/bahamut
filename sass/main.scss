@@ -1,4 +1,4 @@
-main{
+.presentation, main{
     height:70vh;
     background-color: var(--thema-white);
     box-sizing: border-box;
@@ -6,8 +6,10 @@ main{
 }
 
 .presentation{
+    .section{
+        margin:auto;
+    }
     #Pres{
-        // border:3px solid var(--thema-dark-transp);
         border-radius: 3px;
         box-sizing: border-box;
         width: 100%;

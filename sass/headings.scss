@@ -1,5 +1,5 @@
 .heading1, .heading2,.heading3, .heading4{
-    margin:1.5%;
+    margin:$margin;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,7 +7,7 @@
     border:2px solid var(--thema-dark-transp);
     font-size:1.2rem;
     opacity: 0.84;
-    letter-spacing: 0.03rem;    
+    letter-spacing: $letter-spacing-s;    
     font-family: var(--font-normal);
     color:var(--thema-darker);
     font-weight: normal;
@@ -50,8 +50,8 @@
     padding:unset;
     text-transform: uppercase;
     font-size: 0.92rem;
-    height: 8vh;
-    letter-spacing: 0.064rem;
+    height: 10vh;
+    letter-spacing: 0.068rem;
 }
 #carousel4 .pict .classy .heading3,
 #carousel5 .pict .classy .heading3,
@@ -65,21 +65,11 @@
 
 .heading1{
     font-size: 1.48rem;
-    background-color:var(--thema-lightest);
-    background-image: url('../assets/elements/background-heading.svg');
-    // background-image: url('../assets/elements/texture-dark.jpg');
-    background-blend-mode: overlay;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: 90%;
-    color:var(--thema-darkest);
-    font-family: var(--font-normal);
-    // justify-content: flex-start;     
-    // text-indent: 0.25rem;
-    letter-spacing: -0.03rem;
-    height: 11.25vh;
-
-    // text-transform: capitalize;
+    color:var(--thema-dark-transp);
+    font-family: var(--font-contrail);
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-s;
+    height: 40vh;
     opacity: 1;
 }
 
@@ -102,6 +92,28 @@
     }
 }
 
+.responsiveB section .heading2{
+    // color:red;
+    font-size: 2rem;
+    // font-weight: bolder;
+    opacity: 0.24;
+    font-family: var(--font-contrail);
+    font-style: normal;
+    letter-spacing: 0rem;
+    padding-block-start: 0.32rem!important;
+
+}
+
+.responsiveB header{
+    background-color: unset;
+    .heading1{
+        background-color: unset;
+    }
+}
+
+.responsiveB .test{
+    background-color: unset;
+}
 
 @keyframes switchBg {
     from{

@@ -122,7 +122,7 @@ $headings = [
     ],
     [
         "class" => "heading3",
-        "title" => "librairies de prédilection & js"
+        "title" => "librairies de prédilection"
     ],
     [
         "class" => "heading3",
@@ -136,16 +136,16 @@ $headings = [
 
 $carouselItems = [
     [
-        'title' => 'introduction',
-        'source' => 'picture-test.svg',
-        'content' => 'Hello, Je m\'appelle Tarik et je suis développeur web junior',
+        'title' => 'présentation',
+        'source' => 'portrait.jpg',
+        'content' => 'Hello, Je m\'appelle Tarik et je suis développeur web junior.',
         'content2' => 'Concevoir des maquettes, créer des graphismes, réfléchir à des algorithmes performants, apprendre de nouvelles technologies sont autant d\'activités qui m\'animent !'
     ],
     [
         'title' => 'parcours linguistique',
-        'source' => 'picture-2.svg',
-        'content' => 'Après un bac littéraire, j\'ai fait des études d\'espagnol et d\'anglais à l\'université Stendhal à Grenoble',
-        'content2' => 'Je suis bilingue, j\'ai récemment passé le TOEIC avec succès'
+        'source' => 'univ-stendhal.jpg',
+        'content' => 'Après un baccalauréat général, j\'ai fait des études d\'espagnol et d\'anglais à l\'université Stendhal à Grenoble.',
+        'content2' => 'Je suis bilingue, j\'ai récemment passé le TOEIC avec succès.'
     ],
     // [
     //     'title' => 'mécanicien couturier',
@@ -161,21 +161,21 @@ $carouselItems = [
     // ],
     [
         'title' => 'human booster',
-        'source' => 'picture-6.svg',
-        'content' => 'Après 1 an de formation au sein de l\'organisme human booster, me voilà diplômé au titre de développeur web et web mobile',
-        'content2' => 'À cet égard, je remercie HUMAN BOOSTER pour leur implication, leur sérieux et les efforts qu\'ils ont déployé pour maintenir et poursuivre la formation en dépit du contexte sanitaire'
+        'source' => 'human-booster.png',
+        'content' => 'Après 1 an de formation au sein de l\'organisme HUMAN BOOSTER, me voilà diplômé au titre de développeur web et web mobile.',
+        'content2' => 'À cet égard, je remercie HUMAN BOOSTER pour leur implication, leur sérieux et les efforts qu\'ils ont déployé pour maintenir et poursuivre la formation en dépit du contexte sanitaire.'
     ],
     [
         'title' => 'get bold design',
-        'source' => 'picture-7.svg',
-        'content' => 'J\'ai réalisé mon stage de fin de parcours chez le webdesigner Gaël Barnabé qui dirige sa propre entreprise Get Bold Design',
-        'content2' => 'J\'ai eu la chance d\'apprendre de nombreuses techniques de création graphique et d\'intégration web, c\'est à cette occasion que j\'ai découvert l\'outil Figma, et les librairies p5.js et three.js. J\'ai beaucoup apprécié ce stage. Cela a renforcé ma volonté de devenir un développeur aguéri.'
+        'source' => 'get-bold-design.jpg',
+        'content' => 'J\'ai réalisé mon stage de fin de parcours chez le webdesigner Gaël Barnabé qui dirige sa propre entreprise Get Bold Design.',
+        'content2' => 'J\'ai eu la chance d\'apprendre de nombreuses techniques de création graphique et d\'intégration web, c\'est à cette occasion que j\'ai découvert l\'outil Figma, et les librairies P5.js et Three.js. J\'ai beaucoup apprécié ce stage. Cela a renforcé ma volonté de devenir un développeur aguéri.'
     ],
     [
         'title' => 'vers de nouveaux défis',
-        'source' => 'picture-5.svg',
-        'content' => 'Je me sens pleinement serein pour la suite de l\'aventure et prêt à relever de nouveaux défis',
-        'content2' => 'J\'ai hâte d\'intégrer une équipe, commencer à mettre en pratique les techniques acquises et en apprendre de nouvelles!'
+        'source' => 'sunshine.jpg',
+        'content' => 'Je me sens pleinement serein pour la suite de l\'aventure et prêt à relever de nouveaux défis.',
+        'content2' => 'J\'ai hâte d\'intégrer une équipe, commencer à mettre en pratique les techniques acquises et en apprendre de nouvelles !'
     ],
 ];
 
@@ -253,11 +253,11 @@ $skillsItems = [
 $carousels = [
     [
         "id" => "carousel1",
-        "title" => "compétences front-end"
+        "title" => "front-end"
     ],
     [
         "id" => "carousel2",
-        "title" => "compétences back-end"
+        "title" => "back-end"
     ],
     [
         "id" => "carousel3",
@@ -345,8 +345,8 @@ $partners = [
 $downloads = [
     [
         "source" => 'icon-dl-cv.svg',
-        "href" => './downloads/cv-officiel-heavy.pdf',
-        "download" => 'cv-officiel-heavy.pdf',
+        "href" => './downloads/cv-officiel.pdf',
+        "download" => 'cv-officiel.pdf',
         "content" => 'cv moderne',
     ],
     [
@@ -580,6 +580,11 @@ $legalTitles = [
 
 $projects = [
     [
+        "link" => "index.php?controller=projets&&action=couch3d",
+        "goal" => "créer un configurateur 3d d'un living-room avec la librairie Three.js",
+        "span" => "configurateur 3d"
+    ],
+    [
         "link" => "index.php?controller=projets&&action=planete3d",
         "goal" => "système solaire des langages de développement réalisé avec la librairie Three.js",
         "span" => "planète 3d"
@@ -588,11 +593,6 @@ $projects = [
         "link" => "index.php?controller=projets&&action=carteVisite",
         "goal" => "exploiter l'api drag and drop de javascript afin de créer des programmes pédagogiques",
         "span" => "drag&drop"
-    ],
-    [
-        "link" => "index.php?controller=projets&&action=couch3d",
-        "goal" => "configurateur 3d d'un modèle de canapé",
-        "span" => "configurateur 3d"
     ]
 ]
 

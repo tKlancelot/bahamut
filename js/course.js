@@ -58,7 +58,7 @@ class CarouselTouchPlugin
             let baseTranslate = this.carousel.currentItem * -100/this.carousel.items.length;
             this.carousel.translate(baseTranslate + 100 * translate.x/this.width);
             this.lastTranslate = translate;
-            console.log(translate);
+            // console.log(translate);
         }
     }
 
@@ -319,34 +319,36 @@ export class Carousel  {
 document.addEventListener("DOMContentLoaded", function(){
     if (window.matchMedia("(min-width: 600px)").matches) 
     {
-        // carousel en mode desktop
+
     }
     else
     {  
-        let myCar   = new Carousel(document.querySelector('#carousel0'),{
-            slidesToScroll : 2,
-            slidesVisible : 3,
-            // pagination : true,
-            infinite : true,
-        });
-        let myCar2   = new Carousel(document.querySelector('#carousel1'),{
-            slidesToScroll : 1,
-            slidesVisible : 1,
-            pagination : false,
-            infinite : true
-        })
-        let myCar3   = new Carousel(document.querySelector('#carousel2'),{
-            slidesToScroll : 1,
-            slidesVisible : 1,
-            pagination : false,
-            infinite : true
-        })
-        let myCar4   = new Carousel(document.querySelector('#carousel3'),{
-            slidesToScroll : 1,
-            slidesVisible : 1,
-            pagination : false,
-            infinite : true
-        })
+        // let myCar   = new Carousel(document.querySelector('#carousel0'),{
+        //     slidesToScroll : 2,
+        //     slidesVisible : 3,
+        //     // pagination : true,
+        //     infinite : true,
+        // });
+        // let myCar2   = new Carousel(document.querySelector('#carousel1'),{
+        //     slidesToScroll : 1,
+        //     slidesVisible : 1,
+        //     pagination : false,
+        //     infinite : true
+        // })
+        // let myCar3   = new Carousel(document.querySelector('#carousel2'),{
+        //     slidesToScroll : 1,
+        //     slidesVisible : 1,
+        //     pagination : false,
+        //     infinite : true
+        // })
+        // let myCar4   = new Carousel(document.querySelector('#carousel3'),{
+        //     slidesToScroll : 1,
+        //     slidesVisible : 1,
+        //     pagination : false,
+        //     infinite : true
+        // })
+
+
     }
 })
 

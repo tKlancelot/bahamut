@@ -23,7 +23,8 @@
             text-transform: uppercase;
             // font-weight: bolder;
             font-size: 1.16rem!important;
-            font-family: var(--font-contrail);
+            // font-family: var(--font-contrail);
+            font-family: "Mate",sans-serif;
         }
     }
     .contacts{
@@ -60,7 +61,7 @@
         display: flex;
         justify-content: start;
         flex-direction: column;
-        width: 33%;
+        width: 24%;
         .heading3{
             height: initial;
             margin: 1rem;
@@ -82,7 +83,7 @@
                         height: 4vh;
                         display: flex;
                         align-items: center;
-                        margin:auto 1.5%;
+                        margin:$margin;
                         justify-content: start;
                         background-image: initial!important;
                         font-family: var(--font-normal);
@@ -113,3 +114,4 @@
         content:'🌏 '!important;
     }
 }
+

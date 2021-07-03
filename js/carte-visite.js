@@ -236,14 +236,14 @@ function decalerCase(caseD,valueLeft,valueRight,valueTop,valueBottom){
     allCases[caseD].style.position = "relative";
 }
 
-decalerCase(3,"-50%","initial","initial","initial");
-decalerCase(12,"-50%","initial","initial","initial");
-decalerCase(5,"initial","-50%","initial","initial");
-decalerCase(14,"initial","-50%","initial","initial");
-decalerCase(1,"initial","initial","-50%","initial");
-decalerCase(10,"initial","initial","-50%","initial");
-decalerCase(7,"initial","initial","initial","-50%");
-decalerCase(16,"initial","initial","initial","-50%");
+// decalerCase(3,"-50%","initial","initial","initial");
+// decalerCase(12,"-50%","initial","initial","initial");
+// decalerCase(5,"initial","-50%","initial","initial");
+// decalerCase(14,"initial","-50%","initial","initial");
+// decalerCase(1,"initial","initial","-50%","initial");
+// decalerCase(10,"initial","initial","-50%","initial");
+// decalerCase(7,"initial","initial","initial","-50%");
+// decalerCase(16,"initial","initial","initial","-50%");
 
 
 

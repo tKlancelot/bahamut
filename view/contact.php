@@ -4,7 +4,7 @@ session_start();
 
 $document = "#contact";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
 require ('parts/header.php');
 
@@ -24,7 +24,7 @@ $sectionLeft->startSectionFrame('frameDl','auto','','','');
 
 for ($i = 0; $i < count($downloads); $i++):
     $sectionLeft->startDiv('contactFrame');
-    $sectionLeft->startDiv('content reveal');
+    $sectionLeft->startDiv('content');
     $sectionLeft->createImageLink(CHEMIN3.$downloads[$i]['source'],$downloads[$i]['href'],'picto',$downloads[$i]['content'],$downloads[$i]['download']);
     $sectionLeft->endDiv();
     $sectionLeft->endDiv();
@@ -53,7 +53,7 @@ $sectionLeft->endSection();
 
 $section5 = new Section();
 $section5->startSection('contacts');
-$titreSection = $section5->createTitle('formulaire de contact','heading3 smaller');
+$titreSection = $section5->createTitle('contactez-moi','heading3 smaller');
 
     
 
@@ -105,7 +105,10 @@ require ('parts/footer.php');
 <script type="module">
 
 import { Activate } from "./js/Activate.js";
-Activate(0,'.menu-footer ul li a');
+import { PositionItem } from "./js/PositionItem.js";
+
+Activate(5,'.menu ul li a');
+PositionItem(5);
 // $('.form-tarik .section-input').css('border-color','var(--thema-dark-transp)');
 $('.form-tarik .section-input').css('border','unset');
 $('.form-tarik .section-input input').css('padding','0.25rem');

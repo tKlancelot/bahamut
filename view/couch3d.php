@@ -4,24 +4,30 @@ session_start();
 
 $document = "#configurateur 3d";
 $title = REGULAR_TITLE;
-$sub = "";
+$sub = REGULAR_SUB;
 
-require ('parts/header.php');
+require ('parts/head.php');
 
 $main = new Main();
 $main->startFrame('config3d');
 $section = new Section();
-$section->createTitle('configurateur 3d canapé (refonte en cours)','heading2');
-$section->startDiv('bottomPanel','bottomP');
+// $section->createTitle('configurateur 3d canapé (refonte en cours)','heading2');
+// $section->startDiv('bottomPanel','bottomP');
 ?>
-<button id='colors'>change color</button>
-<button id='lights'>lights</button>
-<!-- <button>texture</button> -->
+<div class="control-panel">
+
+    <button id='back'>retour</button>
+    <!-- <button id='lights'>lights</button> -->
+    <button id='floor'>floor</button>
+    <button id='background'>background</button>
+    <button id='frame'>frame</button>
+    <button id='grass'>grass</button>
+</div>
 <?php
-$section->endDiv();
+// $section->endDiv();
 $main->endFrame();
 
-require ('parts/footer.php');
+// require ('parts/footer.php');
 
 ?>
 

@@ -1,17 +1,22 @@
 .footer{
     height:15vh;
     box-sizing: border-box;
-    background-color: var(--thema-lightest);
-    background-image: url('../assets/textures/cubes.png');
-    background-blend-mode: darken;
     display: flex;
     flex-direction: column;
-    opacity: 0.92;
+    background-color: var(--thema-transp);
+    background-image: url('../assets/3d/background-blur-3.jpg');
+    background-blend-mode: color-burn;
+    background-size: cover;
+    opacity: 0.96;
+    box-shadow:0px 1px 1px var(--thema-dark-transp) inset;
+    pointer-events: none;
+    background-position-y:100%;
+    background-repeat: no-repeat;
     .menu-footer, .copyright{
         // border:1px solid red;
         display: flex;
         box-sizing: border-box;
-        height: 50%;
+        height: 100%;
         align-items: center;
         justify-content: center;
         font-family: var(--font-normal);
@@ -62,6 +67,11 @@
     }
 }
 
-.copyright p{
+.copyright{
     color: var(--thema-darkest);
+}
+
+
+.footer .menu-footer{
+    display: none;
 }

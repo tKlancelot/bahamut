@@ -8,7 +8,7 @@ class Footer extends Main{
         if($menu):
             $menu = new Menu();
             $menu->startMenu('menu-footer');
-            $menuItems = ['legal notice'];
+            $menuItems = [''];
             for ($i = 0; $i < count($menuItems); $i++):
             $menu->createLinkInLi($menuItems[$i]);
             endfor;

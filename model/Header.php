@@ -29,7 +29,7 @@ class Header
         if($menu):
         $menu = new Menu();
         $menu->startMenu('menu');
-        $menuItems = ['intro','vignettes','parcours','skills','projets','contact'];
+        $menuItems = ['intro','vignettes','parcours','skills','projets','contact','legal notice'];
         for ($i = 0; $i < count($menuItems); $i++):
         $menu->createLinkInLi($menuItems[$i]);
         endfor;
@@ -43,7 +43,7 @@ class Header
 
     public function createTitle($class)
     {
-        echo "<h1 class=".$class."><span>".$this->title."</span><span>&nbsp;".$this->subtitle."</span></h1>";
+        echo "<h1 class=$class><span>".$this->title."&nbsp;</span><span>".$this->subtitle."</span></h1>";
     }
     
     
